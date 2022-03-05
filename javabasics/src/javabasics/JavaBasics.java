@@ -62,8 +62,17 @@ public class JavaBasics {
 				d++;
 			}
 		}
-		System.out.println("even number array: "+a);
-		System.out.println("even number array: "+b);
+		System.out.println("even number array: ");
+		for (int j=0;j<=a.length;j++) {
+			System.out.print(a[j]+" ");
+			
+		}
+		System.out.println("odd number array: ");
+		for (int j=0;j<=a.length;j++) {
+			System.out.print(b[j]+" ");
+			
+		}
+		
 		
 	}
 		
