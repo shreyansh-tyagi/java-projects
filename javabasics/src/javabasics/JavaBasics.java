@@ -21,9 +21,20 @@ public class JavaBasics {
 		case 1:
 			System.out.print("the addition of two number is: ");
 			return a+b;
-		case	
-		
+		case 2:
+			System.out.println("the substraction of two number is: ");
+			return a-b;
+		case 3:
+			System.out.println("the multiplication of two number is : ");
+			return a*b;
+		case 4:
+			System.out.println("the division of two number is : ");
+			return (int)a/b;
+		default:
+			System.out.println("please select the number from the list");
+			return 0;
 		}
+		
 			
 				
 	}
