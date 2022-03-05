@@ -6,16 +6,18 @@ public class JavaBasics {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		while(true) {
 		
 		System.out.println("enter the value of a and b: ");
 		int a=sc.nextInt();
 		int b=sc.nextInt();
-		while(true) {
+		
 		int c=calculator(a,b);
 		System.out.println(c);
 		System.out.println("enter 0 to exit from the program");
 		int d=sc.nextInt();
 		if(d==0) {
+			System.out.println("exited from program, good bye!");
 			break;
 		}
 		}
@@ -36,7 +38,7 @@ public class JavaBasics {
 			return a*b;
 		case 4:
 			System.out.println("the division of two number is : ");
-			return (int)a/b;
+			return a/b;
 		default:
 			System.out.println("please select the number from the list");
 			return 0;
