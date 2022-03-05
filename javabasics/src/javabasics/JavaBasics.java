@@ -62,6 +62,8 @@ public class JavaBasics {
 				d++;
 			}
 		}
+		System.out.println("even number array: "+a);
+		System.out.println("even number array: "+b);
 		
 	}
 		
