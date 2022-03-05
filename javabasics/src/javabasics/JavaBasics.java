@@ -63,12 +63,12 @@ public class JavaBasics {
 			}
 		}
 		System.out.println("even number array: ");
-		for (int j=0;j<=a.length;j++) {
+		for (int j=0;j<n/2;j++) {
 			System.out.print(a[j]+" ");
 			
 		}
-		System.out.println("odd number array: ");
-		for (int j=0;j<=a.length;j++) {
+		System.out.println("\nodd number array: ");
+		for (int j=0;j<n/2;j++) {
 			System.out.print(b[j]+" ");
 			
 		}
