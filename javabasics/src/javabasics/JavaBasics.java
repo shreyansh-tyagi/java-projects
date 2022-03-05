@@ -21,6 +21,9 @@ public class JavaBasics {
 			break;
 		}
 		}
+		System.out.println("enter the number upto where you want to print the even and odd number: ");
+		int e=sc.nextInt();
+		evenodd(e);
 	}
 	public static int calculator(int a,int b) {
 		
@@ -45,6 +48,22 @@ public class JavaBasics {
 		}
 		
 		}
+	public static void evenodd(int n) {
+		int[] a=new int[n];
+		int[] b=new int[n];
+		int c=0,d=0;
+		for(int i=1;i<=n;i++) {
+			if (i%2==0) {
+				a[c]=i;
+				c++;
+			}
+			else {
+				b[d]=i;
+				d++;
+			}
+		}
+		
+	}
 		
 			
 				
