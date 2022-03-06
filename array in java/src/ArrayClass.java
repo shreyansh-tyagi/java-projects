@@ -7,10 +7,9 @@ public class ArrayClass {
 		System.out.println("enter the size of array: ");
 		int n=sc.nextInt();
 		int arr[]=new int[n];
-		int i;
-		System.out.println("enter the elements into the array: ");
-		for(i=0;i<n;i++);
+		for(int i=0;i<n;i++)
 		{
+			System.out.println("enter the elements at "+i);
 			arr[i]=sc.nextInt();
 		}
 		displaycontent(arr);
@@ -20,9 +19,10 @@ public class ArrayClass {
 	public static void displaycontent(int[] arr)
 	{
 		System.out.println("the array is displayed as: ");
-		for(int i=0;i<arr.length;i++) {
+		for(int i = 0;i<arr.length;i++) {
 			System.out.print(arr[i]+" ");
 		}
+		while(true) {
 		System.out.println("\nEnter 1 for reverse the array: \nEnter 2 for addition of array: \nEnter 3 sort the array: \nEnter 4 to find the length of array");
 		int a=sc.nextInt();
 		switch(a) {
@@ -32,27 +32,38 @@ public class ArrayClass {
 			for(int i=0;i<b.length;i++) {
 				System.out.print(b[i]+" ");
 			}
+			break;
 		case 2:
 			int c=addition(arr);
 			System.out.println("the sum of array is : "+c);
+			break;
 		case 3: 
 			int[] d=sort(arr);
 			System.out.println("the sorting of array is: ");
 			for(int i=0;i<d.length;i++) {
-				System.out.print(d[i],+" ");
+				System.out.print(d[i]+" ");
 			}
+			break;
 		case 4:
 			System.out.println("the lenght of array is: "+arr.length);
+			break;
+		}
+		System.out.println("\nenter 0 to exit from the program");
+		int x=sc.nextInt();
+		if(x==0) {
+			System.out.println("\nexited from program");
+			break;
+		}
 		}
 	}
 	
 	public static int[] reverse(int[] arr) {
 		int t,n=arr.length;
-		for(int i=0;i<arr.length;i++) {
+		for(int i=0;i<arr.length/2;i++) {
 			t=arr[i];
-			arr[i]=arr[n];
-			arr[n]=t;
-			n--;
+			arr[i]=arr[n-i-1];
+			arr[n-i-1]=t;
+			
 		}
 		return arr;
 	}
