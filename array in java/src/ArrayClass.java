@@ -33,9 +33,14 @@ public class ArrayClass {
 				System.out.print(b[i]+" ");
 			}
 		case 2:
-			addition(int[] arr);
+			int c=addition(arr);
+			System.out.println("the sum of array is : "+c);
 		case 3: 
-			sort(int[] arr);
+			int[] d=sort(arr);
+			System.out.println("the sorting of array is: ");
+			for(int i=0;i<d.length;i++) {
+				System.out.print(d[i],+" ");
+			}
 		case 4:
 			System.out.println("the lenght of array is: "+arr.length);
 		}
@@ -50,6 +55,28 @@ public class ArrayClass {
 			n--;
 		}
 		return arr;
+	}
+	public static int addition(int[] a) {
+		int sum=0;
+		for(int i=0;i<a.length;i++) {
+			sum+=a[i];
+		}
+		return sum;
+		
+	}
+	public static int[] sort(int[] a) {
+		int i,j,t,n=a.length;
+		for(i=0;i<n;i++) {
+			for(j=0;j<n;j++) {
+				if(a[i]<a[j]) {
+					t=a[i];
+					a[i]=a[j];
+					a[j]=t;
+				}
+			}
+			
+		}
+		return a;
 	}
 
 }
