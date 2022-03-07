@@ -6,6 +6,7 @@ class Student {
 	//System.out.println("enter the age: ");
 	int a=sc.nextInt();
 	
+	
 	public static void main(String args[]) {
 		
 		Student s1=new Student();
