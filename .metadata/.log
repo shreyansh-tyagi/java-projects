@@ -4307,3 +4307,18 @@ java.util.concurrent.TimeoutException
 
 !ENTRY org.eclipse.ui 2 2 2022-03-08 11:02:43.727
 !MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-08 11:08:13.267
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-08 11:08:13.271
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-08 11:08:13.273
+!MESSAGE buffering callback sts4.classpath.UBECuqsZ oops(initialize through method) false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-08 11:08:13.274
+!MESSAGE executing callback sts4.classpath.UBECuqsZ 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-08 11:08:13.290
+!MESSAGE executing callback sts4.classpath.UBECuqsZ SUCCESS [done]
