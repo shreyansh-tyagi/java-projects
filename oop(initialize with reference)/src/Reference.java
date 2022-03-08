@@ -10,5 +10,6 @@ class Reference1{
 		Reference r=new Reference();
 		r.s=sc.nextLine();
 		r.a=sc.nextInt();
+		System.out.println("your name is: "+r.s+"your age is : "+r.a);
 	}
 }
