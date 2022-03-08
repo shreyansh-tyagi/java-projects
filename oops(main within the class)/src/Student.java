@@ -1,10 +1,12 @@
 import java.util.*;
 class Student {
 	Scanner sc=new Scanner(System.in);
-	//System.out.println("enter the name: ");
 	String s=sc.nextLine();
-	//System.out.println("enter the age: ");
 	int a=sc.nextInt();
+	//System.out.println("enter the name: ");
+	
+	//System.out.println("enter the age: ");
+	
 	
 	
 	public static void main(String args[]) {
