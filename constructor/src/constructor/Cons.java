@@ -1,7 +1,7 @@
 package constructor;
 import java.util.*;
 public class Cons {
-	int id,age;
+	int id,age,salary;
 	String name;
 	Cons(int i,String s){ //constructor created
 		id=i;
@@ -18,8 +18,15 @@ public class Cons {
 		age=c2.age;
 		
 	}
+	Cons(int sal){
+		salary=sal;
+		
+	}
 	void display() {
 		System.out.println("your name is: "+name+"\n your id is: "+id+"\nyour age is:"+age);
+	}
+	void salarydisplay() {
+		System.out.println("my salary is: "+salary);
 	}
 	
 
@@ -31,7 +38,8 @@ class Cons1{
 		Cons c=new Cons(41,"shrey tyagi");
 		System.out.println("enter the name,id,age: ");
 		Cons c1=new Cons(sc.nextLine(),sc.nextInt(),sc.nextInt());
-		Cons c2=new Cons(c1);
+		Cons c2=new Cons(c1); //copy constructor object creation by passing the reference of copied constructor
+		new Cons(sc.nextInt()).salarydisplay(); //anonymous object creation with method calling
 		c.display();
 		c1.display();
 		c2.display();
