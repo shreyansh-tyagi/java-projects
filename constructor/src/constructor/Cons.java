@@ -30,6 +30,10 @@ class Cons1{
 		Cons c=new Cons(sc.nextInt(),sc.nextLine());
 		Cons c1=new Cons(sc.nextInt(),sc.nextLine(),sc.nextInt());
 		Cons c2=new Cons(c1);
+		c.display();
+		c1.display();
+		c2.display();
+		sc.close();
 		
 		
 	}
