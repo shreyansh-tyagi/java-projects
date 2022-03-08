@@ -23,7 +23,7 @@ public class Cons {
 		
 	}
 	void display() {
-		System.out.println("your name is: "+name+"\n your id is: "+id+"\nyour age is:"+age);
+		System.out.println("your name is: "+name+"\n your id is: "+id+"\nyour age is:"+age+"\n\n");
 	}
 	void salarydisplay() {
 		System.out.println("my salary is: "+salary);
@@ -39,10 +39,11 @@ class Cons1{
 		System.out.println("enter the name,id,age: ");
 		Cons c1=new Cons(sc.nextLine(),sc.nextInt(),sc.nextInt());
 		Cons c2=new Cons(c1); //copy constructor object creation by passing the reference of copied constructor
-		new Cons(sc.nextInt()).salarydisplay(); //anonymous object creation with method calling
 		c.display();
 		c1.display();
 		c2.display();
+		System.out.println("enter your salary: ");
+		new Cons(sc.nextInt()).salarydisplay(); //anonymous object creation with method calling
 		sc.close();
 		
 		
