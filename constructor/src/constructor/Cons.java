@@ -7,7 +7,7 @@ public class Cons {
 		id=i;
 		name=s;
 	}
-	Cons(int i,String s,int a){ //constructor overloading
+	Cons(String s,int i,int a){ //constructor overloading
 		id=i;
 		name=s;
 		age=a;
@@ -27,8 +27,10 @@ public class Cons {
 class Cons1{
 	public static void main(String args[]) {
 		Scanner sc=new Scanner(System.in);
-		Cons c=new Cons(sc.nextInt(),sc.nextLine());
-		Cons c1=new Cons(sc.nextInt(),sc.nextLine(),sc.nextInt());
+		//System.out.println("enter the name,id: ");
+		Cons c=new Cons(41,"shrey tyagi");
+		System.out.println("enter the name,id,age: ");
+		Cons c1=new Cons(sc.nextLine(),sc.nextInt(),sc.nextInt());
 		Cons c2=new Cons(c1);
 		c.display();
 		c1.display();
