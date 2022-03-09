@@ -11,7 +11,7 @@ public class StaticMethod {
 		
 	}
 }
-class Staticmethod{
+class Staticmethod1{
 	public static void main(String args[]) {
 		Scanner sc=new Scanner(System.in);
 		StaticMethod m=new StaticMethod(sc.nextLine(),sc.nextInt());
@@ -19,7 +19,7 @@ class Staticmethod{
 		m.id=12;
 		// m.clgname="HRIT"; this will not work as static variable and static method can only be accesseed by class name only
 		StaticMethod.clgname="HRIT";
-		System.out.println("new updated id is: "+m.id+"your updated college is: "+StaticMethod.clgname);
+		System.out.println("new updated id is: "+m.id+"\nyour updated college is: "+StaticMethod.clgname);
 		sc.close();
 	}
 }
