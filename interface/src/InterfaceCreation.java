@@ -4,6 +4,8 @@ public interface InterfaceCreation { //interface creation using interface keywor
 	public static void addition(int addition){
 		addition+=10;	
 	}
+
+String addition = null;
 }
  interface InterfaceCreation1 extends InterfaceCreation{
 	 public static void addition(int addition) {
@@ -11,3 +13,20 @@ public interface InterfaceCreation { //interface creation using interface keywor
 	 }
 	
 }
+ class InterfaceClass implements InterfaceCreation,InterfaceCreation1{// this is way to access both the interface at a same time using implements keyword and names of interfaces
+	 Scanner sc=new Scanner(System.in);
+	 public static void main(String args[]) {
+		 
+		 InterfaceClass c=new InterfaceClass();
+		 c.display();
+		 
+	 }
+	 public void display() {
+		 System.out.println("enter the element for first interface: ");
+		 InterfaceCreation.addition(sc.nextInt());
+		 System.out.println("enter the element for second interface: ");
+		 InterfaceCreation1.addition(sc.nextInt());
+		 System.out.println("addition is: "+InterfaceCreation.addition+"\nthe addition for another interface is: "+InterfaceCreation1.addition);
+	 }
+	 
+ }
