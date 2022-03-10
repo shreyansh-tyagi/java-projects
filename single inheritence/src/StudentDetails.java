@@ -5,8 +5,6 @@ public class StudentDetails {
 	StudentDetails(String name,int age){
 		this.name=name;
 		this.age=age;
-	}
-	void display() {
 		System.out.println("your name: "+name+"\nyour age: "+age);
 	}
 }
@@ -25,9 +23,8 @@ class StudentDetails1 extends StudentDetails{
 class Mainmethod{
 	public static void main(String args[]) {
 		Scanner sc=new Scanner(System.in);
-		StudentDetails pobj=new StudentDetails(sc.nextLine(),sc.nextInt());
+		System.out.println("enter your name,age and salary:  ");
 		StudentDetails1 sobj=new StudentDetails1(sc.nextLine(),sc.nextInt(),sc.nextInt());
-		pobj.display();
 		sobj.display();
 		sc.close();
 	}
