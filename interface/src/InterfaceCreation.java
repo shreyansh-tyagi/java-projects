@@ -1,15 +1,18 @@
 import java.util.*;
 public interface InterfaceCreation { //interface creation using interface keyword
 	// interface cannot have constructor it can only have method and variable of type static and default
-	public static void addition(int addition){
+	public  static void addition(int addition){
+		
 		addition+=10;	
+		System.out.println("addition is: "+addition);
 	}
-
-String addition = null;
+	
 }
  interface InterfaceCreation1 extends InterfaceCreation{
-	 public static void addition(int addition) {
+	 public  static void addition(int addition) {
+		 
 		 addition+=20;
+		 System.out.println("addition of another interface is: "+addition);
 	 }
 	
 }
@@ -26,7 +29,6 @@ String addition = null;
 		 InterfaceCreation.addition(sc.nextInt());
 		 System.out.println("enter the element for second interface: ");
 		 InterfaceCreation1.addition(sc.nextInt());
-		 System.out.println("addition is: "+InterfaceCreation.addition+"\nthe addition for another interface is: "+InterfaceCreation1.addition);
 	 }
 	 
  }
