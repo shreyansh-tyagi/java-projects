@@ -19,6 +19,12 @@ class StudentDetails1 extends StudentDetails{
 void display() {
 	System.out.println("your name: "+name+"\nyour age: "+age+"your salary is: "+salary);
 }
-
-
+}
+class Mainmethod{
+	public static void main(String args[]) {
+		Scanner sc=new Scanner(System.in);
+		StudentDetails1 sobj=new StudentDetails1(sc.nextLine(),sc.nextInt(),sc.nextInt());
+		sobj.display();
+		sc.close();
+	}
 }
