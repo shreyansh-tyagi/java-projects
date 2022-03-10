@@ -14,10 +14,10 @@ class StudentDetails1 extends StudentDetails{
 	StudentDetails1(String name, int age,int salary) {
 		super(name, age);
 		this.salary=salary;
-		System.out.println("your name: "+name+"\nyour age: "+age);
+		System.out.println("your name: "+name+"\nyour age: "+age+"\nyour salary is: "+salary);
 	}
 	void display() {
-		System.out.println("your name: "+name+"\nyour age: "+age+"your salary is: "+salary);
+		System.out.println("your name: "+name+"\nyour age: "+age+"\nyour salary is: "+salary);
 	}
 }
 class Mainmethod{
