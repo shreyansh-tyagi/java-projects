@@ -41,6 +41,7 @@ class Super2 extends Super1{
 class Mainmethod{
 	public static void main(String args[]) {
 		Scanner sc=new Scanner(System.in);
+		System.out.println("enter the size of array: ");
 		Super2 s=new Super2(sc.nextInt());
 		int b=s.factorial();
 		s.display();
