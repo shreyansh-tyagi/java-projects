@@ -23,6 +23,13 @@ class Runs extends Run{
 class Mainmthod{
 	public static void main(String agrs[]) {
 		Run r=new Run();
+		Run r1=new Run1();
+		Run r2=new Run2();
+		Run r3=new Runs();
+		r.running();
+		r1.running();
+		r2.running();
+		r3.running();
 		 
 	}
 }
