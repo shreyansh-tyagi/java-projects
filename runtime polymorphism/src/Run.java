@@ -18,6 +18,11 @@ class Run2 extends Run1{
 class Runs extends Run{
 	void running() {
 		System.out.println("we are runs class");
+	}	
+}
+class Mainmthod{
+	public static void main(String agrs[]) {
+		Run r=new Run();
+		 
 	}
-	
 }
