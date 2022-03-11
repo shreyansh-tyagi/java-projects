@@ -14,13 +14,17 @@ public class Aggregation1 {
 
 }
 class Aggregation2{
+	int age,salary,id;
 	Aggregation1 catchup; //created an aggregation of class 1 and without inheriting accessing the element of class 1 through aggregation
 	Aggregation2(int id,int age,int salary,Aggregation1 catchup){
+		this.id=id;
+		this.age=age;
+		this.salary=salary;
 		this.catchup=catchup;
 		
 	}
 	void display1() {
-		System.out.println("id is : "+catchup.id+"\nage is: "+catchup.age+"\nsalary is : "+catchup.salary);
+		System.out.println("id is : "+id+"\nage is: "+age+"\nsalary is : "+salary);
 	}
 	public static void main(String args[]) {
 		Scanner sc=new Scanner(System.in);
