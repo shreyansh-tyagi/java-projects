@@ -36,12 +36,12 @@ class MainMethod{
 		Covariant1 c1=new Covariant1();
 		System.out.println(c1.method());
 		c1.prints();
-		Covariant1 c2=new Covariant2();
+		Covariant2 c2=new Covariant2();
 		System.out.println(c2.method());
 		c2.prints();
-		((Covariant2)c2.method()).prints(); //typecasting
-		new Covariant2().prints();  //anonymous object creation
-		((Covariant1)c1).prints();
+		((Covariant)c2.method()).prints(); //typecasting
+		//new Covariant2().prints();  //anonymous object creation
+		//((Covariant1)c1).prints();
 		
 		
 	}
