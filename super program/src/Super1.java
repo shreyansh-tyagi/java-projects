@@ -25,8 +25,9 @@ class Super2 extends Super1{
 		Super2(int n){
 			super(n);	
 		}
-		int a=super.factorial1();
+		
 		void display() {
+		int a=super.factorial1();
 		System.out.println("the factorial is: "+a);}
 		int factorial() {
 			int sum=0;
@@ -43,8 +44,9 @@ class Mainmethod{
 		Scanner sc=new Scanner(System.in);
 		System.out.println("enter the size of array: ");
 		Super2 s=new Super2(sc.nextInt());
-		int b=s.factorial();
 		s.display();
+		int b=s.factorial();
+		
 		System.out.println("the addition is: "+b);
 		sc.close();
 		}
