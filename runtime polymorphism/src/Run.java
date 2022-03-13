@@ -30,7 +30,7 @@ class Mainmthod{
 		r1.running();
 		r2.running();
 		r3.running();
-		System.out.println(r1 instanceof Run1)
+		System.out.println(r1 instanceof Run1);
 		 
 	}
 }
