@@ -16,12 +16,14 @@ public class Getter {
 		return id;
 	}
 }
-class Mainegtter{
+class Mainegtter{ //encapsulated class because it wrap the getter,setter method and private member of class getter
 	public static void main(String args[]) {
 		Getter g=new Getter();
 		Scanner sc=new Scanner(System.in);
+		System.out.println("enter the name: ");
 		g.setname(sc.nextLine());
 		System.out.println("your name is: "+g.getname());
+		System.out.println("enter the id : ");
 		g.setid(sc.nextInt());
 		System.out.println("your id is: "+g.getid());
 		sc.close();
