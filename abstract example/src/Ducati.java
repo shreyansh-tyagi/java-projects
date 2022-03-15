@@ -16,6 +16,9 @@ class Bike extends Ducati{
 }
 class Mainbike {
 	public static void main(String args[]) {
+		//String cats[]= {"s","b","c"};
+		//int [][] scores= {{2,3,4},{2,3,4}};
+		
 		Ducati d;
 		d=new Bike();
 		d.run();
