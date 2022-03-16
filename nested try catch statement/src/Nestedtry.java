@@ -28,19 +28,19 @@ class Nestedtry1 extends Nestedtry{
 			int n=sc.nextInt();
 			try {
 								
-				arr[n]=i/j;
+				arr[n-1]=i/j;
 				System.out.println("\n\nelement at "+n+" is: "+arr[n]);
-				
+				System.out.println("\n\nupdated array is: ");
 				for (int x: arr) {
-					System.out.println("\n\nupdated array is : "+x+" ");
+					System.out.print(x+" ");
 				}
 			}
 			catch(Exception e) {
 				System.out.println(e);
-				arr[n]=i/(j+2);
+				arr[n-1]=i/(j+2);
 				System.out.println("\n\nelement at "+n+"is: "+arr[n]);
 				for (int x: arr) {
-					System.out.println("\n\nupdated array is : "+x+" ");
+					System.out.println(x+" ");
 				}
 				
 				
@@ -51,7 +51,7 @@ class Nestedtry1 extends Nestedtry{
 			
 		}
 		catch(Exception e1) {
-			System.out.println(e1);
+			System.out.println("\n\n"+e1);
 			System.out.println("\nenter the string: ");
 			s=sc.nextLine();
 			System.out.println("\nthe length of string: "+s.length());
