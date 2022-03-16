@@ -12534,3 +12534,18 @@ java.lang.InterruptedException
 
 !ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 15:03:51.527
 !MESSAGE executing callback sts4.classpath.TRnYUSNr SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 15:26:45.055
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 15:26:45.056
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 15:26:45.058
+!MESSAGE buffering callback sts4.classpath.TRnYUSNr final, finally and finalize false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 15:26:45.058
+!MESSAGE executing callback sts4.classpath.TRnYUSNr 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 15:26:45.062
+!MESSAGE executing callback sts4.classpath.TRnYUSNr SUCCESS [done]

@@ -6,6 +6,7 @@ public class ExceptionPropagation {
 		System.out.println("the value of data: "+data);
 	}
 	void b() {
+		System.out.println("enter two number: ");
 		a(sc.nextInt(),sc.nextInt());
 	}
 	void c() {
@@ -16,7 +17,10 @@ public class ExceptionPropagation {
 			System.out.println(e);
 			
 		}
-	}
+		finally {
+			System.out.println("entered the final block");
+		}
+	} 	
 	public static void main(String args[]) {
 		ExceptionPropagation p=new ExceptionPropagation();
 		p.c();
