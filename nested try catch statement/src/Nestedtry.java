@@ -16,23 +16,30 @@ class Nestedtry1 extends Nestedtry{
 		
 	}
 	int data;
+	@SuppressWarnings("null")
 	void trycatchmethod() {
 	try {
 		String s;
 		data=i/j;
 		System.out.println(data);
 		try {
+			s=null;
+			System.out.println(s.length());
+			System.out.println("enter the index at which you want updation of array: ");
+			int n=sc.nextInt();
 			try {
-				System.out.println("enter the size of array: ");
-				int n=sc.nextInt();				
+								
 				arr[n]=i/j;
 				System.out.println("\n\nelement at "+n+"is: "+arr[n]);
 			}
 			catch(Exception e) {
+				System.out.println(e);
+				arr[n]=i/(j+2);
+				System.out.println("\n\nelement at "+n+"is: "+arr[n]);
+				
 				
 			}
-			s=null;
-			System.out.println(s.length());
+			
 			
 		}
 		catch(Exception e1) {
@@ -50,4 +57,16 @@ class Nestedtry1 extends Nestedtry{
 	}
 	}
 	
+}
+class Execute{
+	public static void main(String args[]) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter the size of array: ");
+		int n=sc.nextInt();
+		int arr[]=new int[n];
+		for (int i=0;i<n;i++) {
+			arr[i]=sc.nextInt();
+		}
+		Nestedtry1 t=new Nestedtry1()
+	}
 }
