@@ -12147,3 +12147,351 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:01:11.503
 !MESSAGE executing callback sts4.classpath.gxJsIxqo SUCCESS [done]
+
+!ENTRY org.eclipse.ui 2 2 2022-03-16 11:19:08.501
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:49:51.948
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.gxJsIxqo
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:49:51.950
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.gxJsIxqo
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:49:51.952
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:49:51.953
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.gxJsIxqo => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:50:58.527
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:50:58.530
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@5afbfc80[org.springframework.tooling.boot.ls:1.30.0.202201310805(id=564)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:50:58.532
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.eclipse.lsp4e 4 0 2022-03-16 11:51:00.619
+!MESSAGE TimeoutException
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.eclipse.lsp4e.LanguageServerWrapper.supportsWorkspaceFolderCapability(LanguageServerWrapper.java:550)
+	at org.eclipse.lsp4e.LanguageServerWrapper.canOperate(LanguageServerWrapper.java:539)
+	at org.eclipse.lsp4e.LanguageServerWrapper.canOperate(LanguageServerWrapper.java:872)
+	at org.eclipse.lsp4e.LanguageServiceAccessor.lambda$6(LanguageServiceAccessor.java:361)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:178)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.HashMap$KeySpliterator.forEachRemaining(HashMap.java:1707)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at org.eclipse.lsp4e.LanguageServiceAccessor.getLSWrappers(LanguageServiceAccessor.java:362)
+	at org.eclipse.lsp4e.LanguageServiceAccessor.getLanguageServers(LanguageServiceAccessor.java:588)
+	at org.eclipse.lsp4e.ConnectDocumentToLanguageServerSetupParticipant$2.run(ConnectDocumentToLanguageServerSetupParticipant.java:75)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.lsp4e 4 0 2022-03-16 11:51:01.621
+!MESSAGE TimeoutException
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.eclipse.lsp4e.LanguageServerWrapper.supportsWorkspaceFolderCapability(LanguageServerWrapper.java:550)
+	at org.eclipse.lsp4e.LanguageServerWrapper.canOperate(LanguageServerWrapper.java:539)
+	at org.eclipse.lsp4e.LanguageServerWrapper.canOperate(LanguageServerWrapper.java:872)
+	at org.eclipse.lsp4e.LanguageServiceAccessor.lambda$7(LanguageServiceAccessor.java:379)
+	at java.base/java.util.stream.MatchOps$1MatchSink.accept(MatchOps.java:90)
+	at java.base/java.util.HashMap$KeySpliterator.tryAdvance(HashMap.java:1728)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.MatchOps$MatchOp.evaluateSequential(MatchOps.java:230)
+	at java.base/java.util.stream.MatchOps$MatchOp.evaluateSequential(MatchOps.java:196)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.anyMatch(ReferencePipeline.java:632)
+	at org.eclipse.lsp4e.LanguageServiceAccessor.getLSWrappers(LanguageServiceAccessor.java:378)
+	at org.eclipse.lsp4e.LanguageServiceAccessor.getLanguageServers(LanguageServiceAccessor.java:588)
+	at org.eclipse.lsp4e.ConnectDocumentToLanguageServerSetupParticipant$2.run(ConnectDocumentToLanguageServerSetupParticipant.java:75)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.536
+!MESSAGE Boot LS startup time from start to initialized: 4001ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.755
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.TRnYUSNrisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.755
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.755
+!MESSAGE Scheduling initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.765
+!MESSAGE Scheduling initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.766
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.767
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.TRnYUSNr => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.769
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.770
+!MESSAGE buffering callback sts4.classpath.TRnYUSNr nested try catch statement false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.772
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.774
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.775
+!MESSAGE buffering callback sts4.classpath.TRnYUSNr abstract example false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.777
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.779
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.780
+!MESSAGE buffering callback sts4.classpath.TRnYUSNr abstraction in java false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.781
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.785
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.785
+!MESSAGE buffering callback sts4.classpath.TRnYUSNr aggregation false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.786
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.787
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.788
+!MESSAGE buffering callback sts4.classpath.TRnYUSNr anonymous object false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.789
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.790
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.793
+!MESSAGE buffering callback sts4.classpath.TRnYUSNr array in java false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.794
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.795
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.797
+!MESSAGE buffering callback sts4.classpath.TRnYUSNr constructor false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.798
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.799
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.799
+!MESSAGE buffering callback sts4.classpath.TRnYUSNr covariant false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.806
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.808
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.810
+!MESSAGE buffering callback sts4.classpath.TRnYUSNr exception handling false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.811
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.814
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.816
+!MESSAGE buffering callback sts4.classpath.TRnYUSNr firstjavaprogram false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.817
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.818
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.818
+!MESSAGE buffering callback sts4.classpath.TRnYUSNr functionprogram false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.821
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.824
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.825
+!MESSAGE buffering callback sts4.classpath.TRnYUSNr getter and setter false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.826
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.828
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.831
+!MESSAGE buffering callback sts4.classpath.TRnYUSNr interface false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.832
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.833
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.833
+!MESSAGE buffering callback sts4.classpath.TRnYUSNr interfaces like abstraction false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.836
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.839
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.840
+!MESSAGE buffering callback sts4.classpath.TRnYUSNr javabasics false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.841
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.843
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.844
+!MESSAGE buffering callback sts4.classpath.TRnYUSNr method overiding false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.845
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.846
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.847
+!MESSAGE buffering callback sts4.classpath.TRnYUSNr method overloading false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.848
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.850
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.852
+!MESSAGE buffering callback sts4.classpath.TRnYUSNr multiple and hierarchical false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.853
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.854
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.855
+!MESSAGE buffering callback sts4.classpath.TRnYUSNr oop(initialize with reference) false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.856
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.856
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.858
+!MESSAGE buffering callback sts4.classpath.TRnYUSNr oops(initialize through method) false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.859
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.861
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.861
+!MESSAGE buffering callback sts4.classpath.TRnYUSNr oops(main within the class) false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.862
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.866
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.867
+!MESSAGE buffering callback sts4.classpath.TRnYUSNr opps(main outside the class) false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.868
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.870
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.871
+!MESSAGE buffering callback sts4.classpath.TRnYUSNr runtime polymorphism false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.872
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.874
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.874
+!MESSAGE buffering callback sts4.classpath.TRnYUSNr single inheritence false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.875
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.877
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.878
+!MESSAGE buffering callback sts4.classpath.TRnYUSNr static method false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.880
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.882
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.884
+!MESSAGE buffering callback sts4.classpath.TRnYUSNr super program false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.885
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.886
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.887
+!MESSAGE buffering callback sts4.classpath.TRnYUSNr this keyword false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.889
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.891
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.891
+!MESSAGE buffering callback sts4.classpath.TRnYUSNr try and catch exception handling false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:02.891
+!MESSAGE executing callback sts4.classpath.TRnYUSNr 28 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-16 11:51:03.742
+!MESSAGE executing callback sts4.classpath.TRnYUSNr SUCCESS [done]

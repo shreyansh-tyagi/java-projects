@@ -14,8 +14,9 @@ class Trycatch1 extends Trycatch{
 	int data;
 	void trycatchmethod() {
 	try {
-	 data = i/j;
-	 System.out.println(data);
+	 data = i/j; //exception will occur in this line if we divide the number by zero 
+	 System.out.println(data); //therefore this line will not be executed
+	 //if correct input is provided then the this line will be executed and catch block will not be executed
 	}
 	catch(Exception e) {
 		System.out.println(e);
