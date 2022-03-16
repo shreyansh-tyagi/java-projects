@@ -15,6 +15,7 @@ class Trycatch1 extends Trycatch{
 	void trycatchmethod() {
 	try {
 	 data = i/j;
+	 System.out.println(data);
 	}
 	catch(Exception e) {
 		System.out.println(e);
@@ -26,6 +27,7 @@ class Trycatch1 extends Trycatch{
 class Maintry{
 	public static void main(String args[]) {
 		Scanner sc =new Scanner(System.in);
+		System.out.println("enter two number: ");
 		Trycatch1 t=new Trycatch1(sc.nextInt(),sc.nextInt());
 		t.trycatchmethod();
 		sc.close();
