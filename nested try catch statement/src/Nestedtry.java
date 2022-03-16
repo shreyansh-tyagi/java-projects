@@ -24,8 +24,6 @@ class Nestedtry1 extends Nestedtry{
 		System.out.println(data);
 		try {
 			
-			s=null;
-			System.out.println(s.length());
 			System.out.println("enter the index at which you want updation of array: ");
 			int n=sc.nextInt();
 			try {
@@ -40,6 +38,8 @@ class Nestedtry1 extends Nestedtry{
 				
 				
 			}
+			s=null;
+			System.out.println(s.length());
 			
 			
 		}
@@ -68,11 +68,14 @@ class Execute{
 		for (int i=0;i<n;i++) {
 			arr[i]=sc.nextInt();
 		}
+		System.out.println("/n/narray is: ");
 		for(int x:arr) {
 			System.out.print(x+" ");
 		}
 		System.out.println("\nenter two integer: ");
 		Nestedtry1 t=new Nestedtry1(sc.nextInt(),sc.nextInt(),arr);
+		t.trycatchmethod();
+		sc.close();
 		
 	}
 }
