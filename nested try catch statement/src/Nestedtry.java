@@ -23,6 +23,7 @@ class Nestedtry1 extends Nestedtry{
 		data=i/j;
 		System.out.println(data);
 		try {
+			
 			s=null;
 			System.out.println(s.length());
 			System.out.println("enter the index at which you want updation of array: ");
@@ -52,7 +53,7 @@ class Nestedtry1 extends Nestedtry{
 	}
 	catch(Exception e2) {
 		System.out.println(e2);
-		System.out.println("the division of two number: "+i/(j+2));
+		System.out.println("\nthe division of two number: "+i/(j+2));
 		
 	}
 	}
@@ -61,12 +62,17 @@ class Nestedtry1 extends Nestedtry{
 class Execute{
 	public static void main(String args[]) {
 		Scanner sc=new Scanner(System.in);
-		System.out.println("enter the size of array: ");
+		System.out.println("\nenter the size of array: ");
 		int n=sc.nextInt();
 		int arr[]=new int[n];
 		for (int i=0;i<n;i++) {
 			arr[i]=sc.nextInt();
 		}
-		Nestedtry1 t=new Nestedtry1()
+		for(int x:arr) {
+			System.out.print(x+" ");
+		}
+		System.out.println("\nenter two integer: ");
+		Nestedtry1 t=new Nestedtry1(sc.nextInt(),sc.nextInt(),arr);
+		
 	}
 }
