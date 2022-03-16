@@ -23,3 +23,11 @@ class Trycatch1 extends Trycatch{
 	}
 	}
 }
+class Maintry{
+	public static void main(String args[]) {
+		Scanner sc =new Scanner(System.in);
+		Trycatch1 t=new Trycatch1(sc.nextInt(),sc.nextInt());
+		t.trycatchmethod();
+		sc.close();
+	}
+}
