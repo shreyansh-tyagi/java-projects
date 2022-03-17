@@ -5,10 +5,10 @@ void finalmethod(final int a) //the value of a cannot be change now as it is fin
 {
 	Scanner sc =new Scanner(System.in);
 	System.out.println("\nenter the element to divide the final number: ");
-	int b=a/sc.nextInt();
+	
 	try {
 		
-		
+		int b=a/sc.nextInt();
 		System.out.print("\ndivision with final integer is: "+b);
 	}
 	catch(Exception e) {
@@ -17,7 +17,7 @@ void finalmethod(final int a) //the value of a cannot be change now as it is fin
 		
 	}
 	finally { //finally is the block which will execute no matter the exception occur or not 
-		System.out.println("\nfinally the value of b: "+b);
+		System.out.println("\nfinally the value of b: ");
 		
 	}
 	sc.close();
