@@ -20,7 +20,7 @@ class Mainthread1{
 		m.start();
 		Mythread1 m1=new Mythread1(); //while creating the interface we cannot access the method withou creating the object of thread class 
 		Thread t=new Thread(m1);
-		t.start()
+		t.start();
 		
 	}
 }
