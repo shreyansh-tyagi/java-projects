@@ -10,6 +10,11 @@ public class Threados extends Thread{
 		t2.start();
 		Thread t3=new Thread(t1,t,"hello2");
 		t3.start();
+		Thread t4=new Thread(t1,t,"hello3");
+		t4.start();
+		System.out.println("the name of thread group name: "+Thread.currentThread().getName());
+		System.out.println("the name of thredgroup is: "+t1.getName());
+		t1.list();
 	}
 			
 
