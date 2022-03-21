@@ -22,3 +22,28 @@ public class Joinaz extends Thread{
 	}
 
 }
+class Joinaz1 extends Joinaz{
+	public static void main(String args[]) {
+		Joinaz j=new Joinaz();
+		Joinaz j1=new Joinaz();
+		Joinaz j2=new Joinaz();
+		//Thread t=new Thread(j);
+		j.start();
+		try {
+			j.join(1500);
+		}
+		catch(Exception e) {
+			System.out.println(e);
+		}
+		j1.start();
+		try {
+			j1.join(1500);
+		}
+		catch(Exception s){
+			System.out.println(s);
+			
+		}
+		j2.start();
+	}
+	
+}
