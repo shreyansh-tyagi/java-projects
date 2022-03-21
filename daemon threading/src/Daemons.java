@@ -9,11 +9,11 @@ public class Daemons extends Thread{
 		}
 	}
 	public static void main(String args[]) {
-		Daemons d=new Daemons();
+		Daemons d=new Daemons(); //creating thread
 		Daemons d1=new Daemons();
 		Daemons d2=new Daemons();
-		d.setDaemon(true);
-		d1.setDaemon(false);
+		d.setDaemon(true); //setting the daemon value of current thread as true
+		d1.setDaemon(false); 
 		d2.start();
 		d1.start();
 		d.start();
