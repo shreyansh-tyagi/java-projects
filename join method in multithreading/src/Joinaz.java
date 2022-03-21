@@ -1,11 +1,13 @@
 import java.util.*;
 public class Joinaz extends Thread{
 	Scanner sc=new Scanner(System.in);
+	int n=sc.nextInt();
+	int a = 1;
 	public void run() {
 		System.out.println("enter the number: ");
-		int n=sc.nextInt();
-		int a = 1;
-		for(int i=0;i<=n;i++) {
+		
+		
+		for(int i=1;i<=n;i++) {
 			try {
 				Thread.sleep(500);
 				a*=i;
