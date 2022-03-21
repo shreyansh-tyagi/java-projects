@@ -22,7 +22,16 @@ System.out.println(Thread.currentThread().getName()+"is the first execution");
 class MainThreados{
 	public static void main(String args[]) {
 		ThreadGroup g=new ThreadGroup("the parent of threadGroup");
+		ThreadGroup g1=new ThreadGroup(g,"the child threadgroup");
 		ActiveThread a=new ActiveThread("first execute",g);
+		System.out.println("executing the first thread");
 		ActiveThread b=new ActiveThread("second execute",g);
+		System.out.println("executing the second thread");
+		System.out.println("total thread group active: "+g.activeGroupCount());
+		System.out.println("the name of parent thread: "+g.getName());
+		System.out.println("the name of child thread: "+g1.getName());
+		a.start();
+		b.start();
+		
 	}
 }
