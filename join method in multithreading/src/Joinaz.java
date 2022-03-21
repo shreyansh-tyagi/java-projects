@@ -4,7 +4,7 @@ public class Joinaz extends Thread{
 	int n=sc.nextInt();
 	int a = 1;
 	public void run() {
-		System.out.println("enter the number: ");
+		
 		
 		
 		for(int i=1;i<=n;i++) {
@@ -26,8 +26,11 @@ public class Joinaz extends Thread{
 }
 class Joinaz1 extends Joinaz{
 	public static void main(String args[]) {
+		System.out.println("enter the number: ");
 		Joinaz j=new Joinaz();
+		System.out.println("enter the number: ");
 		Joinaz j1=new Joinaz();
+		System.out.println("enter the number: ");
 		Joinaz j2=new Joinaz();
 		//Thread t=new Thread(j);
 		j.start();
@@ -39,7 +42,7 @@ class Joinaz1 extends Joinaz{
 		}
 		j1.start();
 		try {
-			j1.join(1500);
+			j1.join(2500);
 		}
 		catch(Exception s){
 			System.out.println(s);
