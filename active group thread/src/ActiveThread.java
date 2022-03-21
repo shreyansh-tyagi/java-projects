@@ -35,8 +35,9 @@ class MainThreados{
 		System.out.println("total thread group active: "+g.activeCount());
 		System.out.println("the name of parent thread: "+g.getName());
 		System.out.println("the name of child thread: "+g1.getName());
-		a.start();
-		b.start();
+		a.run();
+		b.run();
+		c.run();
 		
 	}
 }
