@@ -8,7 +8,7 @@ public class Mythread extends Thread {
 	}
 
 }
-class Mythread1 implements Runnable{
+class Mythread1 implements Runnable{ // runnable is interface
 	public void run() {
 		System.out.println("we are in interface");
 	}
