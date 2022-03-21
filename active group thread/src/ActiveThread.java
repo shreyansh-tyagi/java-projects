@@ -15,8 +15,9 @@ public class ActiveThread extends Thread{
 				System.out.println(e);
 			}
 		}
-sc.close();
+
 System.out.println(Thread.currentThread().getName()+"is the first execution");
+sc.close();
 	}
 }
 class MainThreados{
@@ -27,7 +28,11 @@ class MainThreados{
 		System.out.println("executing the first thread");
 		ActiveThread b=new ActiveThread("second execute",g);
 		System.out.println("executing the second thread");
-		System.out.println("total thread group active: "+g.activeGroupCount());
+		ActiveThread c=new ActiveThread("third execute",g1);
+		System.out.println("executing the third thread");
+		System.out.println("total 1st thread group active: "+g.activeGroupCount());
+		System.out.println("total 2nd thread group active: "+g1.activeGroupCount());
+		System.out.println("total thread group active: "+g.activeCount());
 		System.out.println("the name of parent thread: "+g.getName());
 		System.out.println("the name of child thread: "+g1.getName());
 		a.start();
