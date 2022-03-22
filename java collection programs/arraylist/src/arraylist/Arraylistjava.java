@@ -9,6 +9,10 @@ public class Arraylistjava {
 			System.out.println("enter the element into the arraylist: ");
 			l.add(sc.next());
 		}
+		Iterator it=l.iterator();
+		while(it.hasNext()) {
+			System.out.println(it.next());
+		}
 		}
 
 }
