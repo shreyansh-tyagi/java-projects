@@ -17,7 +17,7 @@ public class DestroyThread extends Thread{
 				System.out.println(e);
 			}
 		}
-		System.out.println("\n\n"+Thread.currentThread().getName()+"thread has finished executing");
+		System.out.println("\n\n"+Thread.currentThread().getName()+" thread has finished executing");
 		sc.close();
 	}
 
@@ -29,16 +29,16 @@ class DestroyThread1{
 		ThreadGroup g1=new ThreadGroup(g,"child group thread"); //child thread 
 		DestroyThread d=new DestroyThread("shreyansh",g);
 		System.out.println("exwcuting the first thread");
-		DestroyThread d1=new DestroyThread("sunny",g);
+		DestroyThread d1=new DestroyThread("sunny",g1);
 		System.out.println("exwcuting the second thread\n");
 		d.join();
 		d1.join();
 		//destroying the child thread 
 		g1.destroy();
-		System.out.println(g1.getName()+"is destroyed");
+		System.out.println("\n\n"+g1.getName()+" is destroyed");
 		//destroying the parent thread
 		g.destroy();
-		System.out.println(g.getName()+"is destroyed");
+		System.out.println(g.getName()+" is destroyed");
 		
 		
 		
