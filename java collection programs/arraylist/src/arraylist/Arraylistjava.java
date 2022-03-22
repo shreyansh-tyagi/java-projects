@@ -13,6 +13,7 @@ public class Arraylistjava {
 		while(it.hasNext()) {
 			System.out.println(it.next());
 		}
+		sc.close();
 		}
 
 }
