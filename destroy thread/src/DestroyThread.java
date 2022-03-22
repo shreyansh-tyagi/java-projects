@@ -40,15 +40,21 @@ class DestroyThread1{
 		for(int i=0;i<enums;i++) {
 			System.out.println("thread "+arr[i].getName()+" is found");
 		}
-		System.out.println("\nthe parent group of "+g.getName()+" is"+g.getParent().getName());
-		System.out.println("\nthe parent group of "+g1.getName()+" is"+g1.getParent().getName());
-		System.out.println("\nthe parent group of "+g2.getName()+" is"+g2.getParent().getName());
+		System.out.println("\nthe parent group of "+g.getName()+" is "+g.getParent().getName());
+		System.out.println("\nthe parent group of "+g1.getName()+" is "+g1.getParent().getName());
+		System.out.println("\nthe parent group of "+g2.getName()+" is "+g2.getParent().getName());
 		d.join();
 		d1.join();
 		d2.join();
 		//destroying the child thread 
 		g1.destroy();
 		System.out.println("\n\n"+g1.getName()+" is destroyed");
+		if(g1.isDestroyed()==true) {
+			System.out.println("\n g1 is destroyed");
+		}
+		else {
+			System.out.println("\n g1 is not destroyed");
+		}
 		//destroying the parent thread
 		g.destroy();
 		System.out.println(g.getName()+" is destroyed");
