@@ -40,18 +40,19 @@ public class ListInterface {
 }
 class MainArray extends ListInterface{
 
+	@SuppressWarnings("unused")
 	public static void main(String args[]) {
 		ListInterface i=new ListInterface();
-		List<String> s=i.array("shrey tyagi");
-		List<String> s1=linkedlist(s,"sunny");
-		List<String> s2=vector(s,"rajesh");
-		List<String> s3=stack(s1,"linkedlist reference");
+		List<String> s=i.array("shrey tyagi");  //returned arraylist
+		List<String> s1=linkedlist(s,"sunny"); //returned linkedlist and passing reference of arraylist
+		List<String> s2=vector(s,"rajesh");    //returned vector and passing reference of arraylist
+		List<String> s3=stack(s1,"linkedlist reference"); //returned stack and passing reference of linkedlist
 		System.out.println("\n\narray list: ");
-		for(String a:s2) {
+		for(String a:s) {
 			System.out.println(a);
 		}
 		System.out.println("\n\nupdated linked list: ");
-		for(String b:s3) {
+		for(String b:s1) {
 			System.out.println(b);
 		}
 	}
