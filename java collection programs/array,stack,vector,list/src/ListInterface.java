@@ -23,6 +23,16 @@ public class ListInterface {
 		}
 		return l;
 	}
+	public static List<String> stack(List<String> l1,String s){
+		List<String> l3=new Stack<String>(); 
+		l1.add(s);
+		((Stack<String>)l3).push(s);
+		for(String a:l3) {
+			System.out.println(a);
+		}
+		return l1;
+		
+	}
 
 }
 class MainArray extends ListInterface{
