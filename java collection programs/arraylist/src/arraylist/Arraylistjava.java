@@ -11,11 +11,11 @@ public class Arraylistjava {
 			l.add(sc.next());
 		}*/
 		l.add("shrey tyagi");
-		Iterator<String> it=l.iterator(); //1st way to print
+		/*Iterator<String> it=l.iterator(); //1st way to print
 		
 		while(it.hasNext()) {
 			System.out.println("\n"+it.next());
-		}
+		}*/
 		for(String e:l)//for each //2nd way to print
 		{
 			System.out.println(e);
