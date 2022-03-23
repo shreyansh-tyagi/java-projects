@@ -4,7 +4,7 @@ public class QueueDeque {
 	QueueDeque(String s){
 		QueueDeque.name=s;
 	}
-	public Queue<String> queue(){
+	public Queue<String> queue(){ //
 		Queue<String> q=new PriorityQueue<String>();
 		q.add(name);
 		q.add("adding the element in queue");
@@ -29,12 +29,13 @@ class Mainqueue extends QueueDeque{
 		Deque<String> de=q.deque();
 		System.out.println("this is queue");
 		for(String s:qu) {
-			System.out.print(s);
+			System.out.println(s);
 		}
-		System.out.println("head-> "+qu.element());
-		System.out.println("head-> "+qu.peek());
+		System.out.println("\n\nhead-> "+qu.element());
+		System.out.println("\n\nhead-> "+qu.peek());
+		System.out.println("this is deque");
 		for(String s1:de) {
-			System.out.print(s1);
+			System.out.println(s1);
 		}
 	}
 }
