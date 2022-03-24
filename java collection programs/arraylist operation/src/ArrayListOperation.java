@@ -25,7 +25,25 @@ public class ArrayListOperation {
 		a1.add(value);
 		a1.add(v1);
 		a1.add(72);
+		List<Integer> re=reverse(a1,v1);
+		for(Integer e:re) {
+			System.out.println(e);
+		}
 		return a1;
+	}
+	public List<Integer> reverse(List<Integer> a1,int v1){
+		a1.add(v1);
+		a1.add(31);
+		a1.set(1,111);
+		ListIterator<Integer> i=a1.listIterator(a1.size());
+		System.out.println("reverse order list is: ");
+		while(i.hasPrevious()) {
+			System.out.println(i.previous());
+		}
+		System.out.println("reversed order list using collections reverse method: ");
+		Collections.reverse(a1);
+		return a1;
+		
 	}
 
 }
