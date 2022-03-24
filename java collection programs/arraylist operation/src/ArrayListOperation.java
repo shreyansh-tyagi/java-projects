@@ -26,6 +26,7 @@ public class ArrayListOperation {
 		a1.add(v1);
 		a1.add(72);
 		List<Integer> re=reverse(a1,v1);
+		System.out.println("reversed order list using collections reverse method: ");
 		for(Integer e:re) {
 			System.out.println(e);
 		}
@@ -40,7 +41,7 @@ public class ArrayListOperation {
 		while(i.hasPrevious()) {
 			System.out.println(i.previous());
 		}
-		System.out.println("reversed order list using collections reverse method: ");
+		
 		Collections.reverse(a1);
 		List<Integer> l= sorting(a1);
 		System.out.println("sorted array is: ");
@@ -55,3 +56,19 @@ public class ArrayListOperation {
 	}
 
 }
+class Mainoperation extends ArrayListOperation{
+	Mainoperation(String s,int v){
+		super(s,v);
+	}
+	public static void main(String args[]) {
+		ArrayListOperation arr=new ArrayListOperation("main String passed",121);
+		List<String> s1= arr.getset("string passed from object",111);
+		display(s1);
+	}
+	static void display(List<String> s1) {
+		System.out.println("printing the array of string: ");
+		s1.forEach(b->{System.out.println(b);});
+		
+	}
+}
+
