@@ -50,7 +50,7 @@ public class SetInterface {
 		treeset.add("added string in tree set");
 		SortedSet<Integer> x=treesetint(n3);
 		System.out.println("displaying the tree set integer: ");
-		for(Integer i:x){
+		for(Integer i:x){ //this integer tree set will display the tree in ascending order
 			System.out.println(i);
 		}
 		return treeset;
