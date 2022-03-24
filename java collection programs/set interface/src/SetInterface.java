@@ -26,8 +26,24 @@ public class SetInterface {
 		linkedhashset1.add(s2);
 		linkedhashset1.add(s);
 		linkedhashset1.add("string addede linked list");
+		return linkedhashset1;
 		
+	}
+	public Set<Integer> linkedhashsetint(int n2){
+		Set<Integer> linkedhashint=new LinkedHashSet<Integer>();
+		linkedhashint.add(n2);
+		linkedhashint.add(n);
+		linkedhashint.add(177);
+		return linkedhashint;
 	}
 	
 
+}
+class Mainhashset extends SetInterface{
+	Mainhashset(String name,int value){
+		super(name,value);
+	}
+	public static void main(String args[]) {
+		
+	}
 }
