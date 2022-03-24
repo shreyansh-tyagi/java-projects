@@ -15,7 +15,17 @@ public class SetInterface {
 	}
 	public Set<Integer> hashsetint(int n1){
 		Set<Integer> integer=new HashSet<Integer>();
-		 
+		integer.add(n1);
+		integer.add(n);
+		integer.add(17);
+		return integer;
+
+	}
+	public Set<String> linkedhashset(String s2){
+		Set<String> linkedhashset1=new LinkedHashSet<String>();
+		linkedhashset1.add(s2);
+		linkedhashset1.add(s);
+		linkedhashset1.add("string addede linked list");
 		
 	}
 	
