@@ -49,5 +49,14 @@ class Mainhashset extends SetInterface{
 		Set<Integer> s1=i.hashsetint(119);
 		Set<String> s2=i.linkedhashset("string given to linked hash string");
 		Set<Integer> s3=i.linkedhashsetint(121);
+		
 	}
+}
+class display extends Mainhashset{
+
+	display(String name, int value) {
+		super(name, value);
+	}
+	
+	
 }
