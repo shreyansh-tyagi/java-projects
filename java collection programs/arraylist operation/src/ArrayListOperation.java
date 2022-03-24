@@ -42,7 +42,15 @@ public class ArrayListOperation {
 		}
 		System.out.println("reversed order list using collections reverse method: ");
 		Collections.reverse(a1);
+		List<Integer> l= sorting(a1);
+		System.out.println("sorted array is: ");
+		l.forEach(a->{System.out.println(a);}); //lamda expression of print the element of arraylist
 		return a1;
+		
+	}
+	public List<Integer> sorting(List<Integer> a2){
+		Collections.sort(a2);
+		return a2;
 		
 	}
 
