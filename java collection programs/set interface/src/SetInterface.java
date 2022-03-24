@@ -11,12 +11,15 @@ public class SetInterface {
 		set.add(s1);
 		set.add(s);
 		set.add("string added");
+		set.add("string added");
 		return set;
 	}
 	public Set<Integer> hashsetint(int n1){
 		Set<Integer> integer=new HashSet<Integer>();
 		integer.add(n1);
 		integer.add(n);
+		integer.add(17);
+		integer.add(17);
 		integer.add(17);
 		return integer;
 
@@ -26,6 +29,7 @@ public class SetInterface {
 		linkedhashset1.add(s2);
 		linkedhashset1.add(s);
 		linkedhashset1.add("string addede linked list");
+		linkedhashset1.add("string addede linked list");
 		return linkedhashset1;
 		
 	}
@@ -34,6 +38,9 @@ public class SetInterface {
 		linkedhashint.add(n2);
 		linkedhashint.add(n);
 		linkedhashint.add(177);
+		linkedhashint.add(177); //it will not consider the duplicate value 
+		linkedhashint.add(177); //it will not consider the order of the list as it is unordered set of elements
+		
 		return linkedhashint;
 	}
 	
@@ -60,22 +67,22 @@ class Display extends Mainhashset{
 		super(name, value);
 	}
 	void displays(Set<String> s,Set<Integer> s1,Set<String> s2,Set<Integer> s3) {
-		System.out.println("\ndisplaying the hashset string: ");
+		System.out.println("\ndisplaying the hashset string: \n");
 		for(String a:s) {
 			System.out.println(a);
 			
 		}
-		System.out.println("\ndisplaying the hashset integer: ");
+		System.out.println("\ndisplaying the hashset integer: \n");
 		for(Integer a1:s1) {
 			System.out.println(a1);
 			
 		}
-		System.out.println("\ndisplaying the linkedhashset string: ");
+		System.out.println("\ndisplaying the linkedhashset string: \n");
 		for(String a2:s2) {
 			System.out.println(a2);
 			
 		}
-		System.out.println("\ndisplaying the linkedhashset integer: ");
+		System.out.println("\ndisplaying the linkedhashset integer: \n");
 		for(Integer a3:s3) {
 			System.out.println(a3);
 			
