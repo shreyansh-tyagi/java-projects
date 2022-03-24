@@ -57,6 +57,28 @@ class display extends Mainhashset{
 	display(String name, int value) {
 		super(name, value);
 	}
+	void displays(Set<String> s,Set<Integer> s1,Set<String> s2,Set<Integer> s3) {
+		System.out.println("\ndisplaying the hashset string: ");
+		for(String a:s) {
+			System.out.println(a);
+			
+		}
+		System.out.println("\ndisplaying the hashset integer: ");
+		for(Integer a1:s1) {
+			System.out.println(a1);
+			
+		}
+		System.out.println("\ndisplaying the linkedhashset string: ");
+		for(String a2:s2) {
+			System.out.println(a2);
+			
+		}
+		System.out.println("\ndisplaying the linkedhashset integer: ");
+		for(Integer a3:s3) {
+			System.out.println(a3);
+			
+		}
+	}
 	
 	
 }
