@@ -44,6 +44,10 @@ class Mainhashset extends SetInterface{
 		super(name,value);
 	}
 	public static void main(String args[]) {
-		
+		SetInterface i=new SetInterface("shreyansh tyagi",109);
+		Set<String> s=i.hashset("string given to hashset function");
+		Set<Integer> s1=i.hashsetint(119);
+		Set<String> s2=i.linkedhashset("string given to linked hash string");
+		Set<Integer> s3=i.linkedhashsetint(121);
 	}
 }
