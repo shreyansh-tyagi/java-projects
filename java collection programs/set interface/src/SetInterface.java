@@ -21,7 +21,7 @@ public class SetInterface {
 		integer.add(17);
 		integer.add(17);
 		integer.add(17);
-		return integer;
+		return integer; 
 
 	}
 	public Set<String> linkedhashset(String s2){
@@ -43,7 +43,26 @@ public class SetInterface {
 		
 		return linkedhashint;
 	}
-	
+	public SortedSet<String> treeset(String s3,int n3){
+		SortedSet<String> treeset=new TreeSet<String>();
+		treeset.add(s3);
+		treeset.add(s);
+		treeset.add("added string in tree set");
+		SortedSet<Integer> x=treesetint(n3);
+		System.out.println("displaying the tree set integer: ");
+		for(Integer i:x){
+			System.out.println(i);
+		}
+		return treeset;
+	}
+	public SortedSet<Integer> treesetint(int n3){
+		SortedSet<Integer> treeint=new TreeSet<Integer>();
+		treeint.add(n3);
+		treeint.add(n);
+		treeint.add(52);
+		return treeint;
+		
+	}
 
 }
 class Mainhashset extends SetInterface{
@@ -56,8 +75,9 @@ class Mainhashset extends SetInterface{
 		Set<Integer> s1=i.hashsetint(119);
 		Set<String> s2=i.linkedhashset("string given to linked hash string");
 		Set<Integer> s3=i.linkedhashsetint(121);
+		SortedSet<String> s4=i.treeset("passing the string inside treeset",111);
 		Display d=new Display("display",911);
-		d.displays(s,s1,s2,s3);
+		d.displays(s,s1,s2,s3,s4);
 		
 	}
 }
@@ -66,7 +86,7 @@ class Display extends Mainhashset{
 	Display(String name, int value) {
 		super(name, value);
 	}
-	void displays(Set<String> s,Set<Integer> s1,Set<String> s2,Set<Integer> s3) {
+	void displays(Set<String> s,Set<Integer> s1,Set<String> s2,Set<Integer> s3,SortedSet<String> s4) {
 		System.out.println("\ndisplaying the hashset string: \n");
 		for(String a:s) {
 			System.out.println(a);
@@ -86,6 +106,10 @@ class Display extends Mainhashset{
 		for(Integer a3:s3) {
 			System.out.println(a3);
 			
+		}
+		System.out.println("\ndisplaying the treeset of string: \n");
+		for(String a4:s4) {
+			System.out.println(a4);
 		}
 	}
 	
