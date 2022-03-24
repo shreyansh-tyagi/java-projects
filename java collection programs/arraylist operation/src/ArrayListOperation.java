@@ -68,7 +68,12 @@ class Mainoperation extends ArrayListOperation{
 	static void display(List<String> s1) {
 		System.out.println("printing the array of string: ");
 		s1.forEach(b->{System.out.println(b);});
-		
+		Collections.sort(s1);
+		System.out.println("after sorting: ");
+		s1.forEach(c->{System.out.println(c);});
+		Collections.reverse(s1);
+		System.out.println("after reversing: ");
+		s1.forEach(d->{System.out.println(d);});
 	}
 }
 
