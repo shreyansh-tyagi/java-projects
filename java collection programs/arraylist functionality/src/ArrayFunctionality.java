@@ -34,6 +34,7 @@ class MainArray{
 	}
 	public static void displaycontent (List<String> linkedlist,List<String> linkedre){
 		linkedlist.forEach(a->{System.out.print(a);});
+		linkedre.forEach(b->{System.out.print(b);});
 		
 		
 	}
