@@ -14,6 +14,20 @@ public class ArrayFunctionality {
 	}
 
 }
+
+
+
+class Displays extends MainArray{
+	public  void displaycontent (List<String> linkedlist,List<String> linkedre){
+		linkedlist.forEach(a->{System.out.print(a);});
+		linkedre.forEach(b->{System.out.print(b);});
+		
+		
+	}
+}
+
+
+
 class MainArray{
 	public static void main(String args[]) {
 		ArrayFunctionality arr=new ArrayFunctionality("shrey","male",23,37500);
@@ -28,16 +42,12 @@ class MainArray{
 		List<String> lis3=retainelement(lis2);
 		System.out.println("after retaining the element: "+lis3);
 		serialization(l);
+		Displays d=new Displays();
 		List<String> linkedlist=linkedlist(lis2);
 		List<String> linkedre=linkedremove(linkedlist);
-		displaycontent(linkedlist,linkedre);
+		d.displaycontent(linkedlist,linkedre);
 	}
-	public static void displaycontent (List<String> linkedlist,List<String> linkedre){
-		linkedlist.forEach(a->{System.out.print(a);});
-		linkedre.forEach(b->{System.out.print(b);});
-		
-		
-	}
+
 	public static List<String> linkedremove(List<String> re){
 		re.remove(0);
 		((LinkedList<String>) re).removeFirst();
