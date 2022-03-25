@@ -54,7 +54,7 @@ class SetFunctionality extends MainArray{
 		s.add(s2);
 		s.add(s3);
 		s.add(s4);
-		System.out.println("printing the set functionality");
+		System.out.println("\n\nprinting the set functionality");
 		s.forEach(a->{System.out.println("name-> "+a.name+" gender-> "+a.gender+" age-> "+a.age+" salary-> "+a.salary);});
 		Set<String> set=new HashSet<String>(re); //created set and adding element from list of string //typeconversion from other collection 
 		set.add("set elment added");// set element added along with the array element
