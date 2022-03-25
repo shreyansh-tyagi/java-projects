@@ -18,15 +18,19 @@ public class ArrayFunctionality {
 
 
 class Displays extends MainArray{
-	public  void displaycontent (List<String> linkedlist,List<String> linkedre){
-		linkedlist.forEach(a->{System.out.print(a);});
-		linkedre.forEach(b->{System.out.print(b);});
-		
-		
+	public  void displaylist (List<String> linkedlist){
+		linkedlist.forEach(a->{System.out.println(a);});
+	}
+	public void displayremove(List<String> linkedre) {
+		linkedre.forEach(b->{System.out.println(b);});
 	}
 }
 
-
+class LinkedLIST extends MainArray{
+	public void reverse(List<String> re) {
+		
+	}
+}
 
 class MainArray{
 	public static void main(String args[]) {
@@ -44,8 +48,9 @@ class MainArray{
 		serialization(l);
 		Displays d=new Displays();
 		List<String> linkedlist=linkedlist(lis2);
+		d.displaylist(linkedlist);
 		List<String> linkedre=linkedremove(linkedlist);
-		d.displaycontent(linkedlist,linkedre);
+		d.displayremove(linkedre);
 	}
 
 	public static List<String> linkedremove(List<String> re){
@@ -57,15 +62,16 @@ class MainArray{
 		return re;
 	}
 	public static List<String> linkedlist(List<String> lis2){
-		List<String> l=new LinkedList<String>();
+		LinkedList<String> l=new LinkedList<String>();
 		l.addAll(lis2);
 		l.add(0,"matt added into linked list");
 		((LinkedList<String>) l).addFirst("firstly");
 		((LinkedList<String>) l).addLast("lastly");
-		List<String> l1=new LinkedList<String>();
+		l.addFirst("abc");
+		LinkedList<String> l1=new LinkedList<String>();
 		l1.add("shrey");
 		l1.add("hello");
-		l.addAll(1, l1);
+		l.addAll(1, l1); 
 		return l;
 	}
 	public static void serialization(List<ArrayFunctionality> l) {
