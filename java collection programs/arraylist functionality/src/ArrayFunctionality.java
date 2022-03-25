@@ -28,6 +28,34 @@ class MainArray{
 		List<String> lis3=retainelement(lis2);
 		System.out.println("after retaining the element: "+lis3);
 		serialization(l);
+		List<String> linkedlist=linkedlist(lis2);
+		List<String> linkedre=linkedremove(linkedlist);
+		displaycontent(linkedlist,linkedre);
+	}
+	public static void displaycontent (List<String> linkedlist,List<String> linkedre){
+		linkedlist.forEach(a->{System.out.print(a);});
+		
+		
+	}
+	public static List<String> linkedremove(List<String> re){
+		re.remove(0);
+		((LinkedList<String>) re).removeFirst();
+		((LinkedList<String>) re).removeLast();
+		((LinkedList<String>) re).removeFirstOccurrence("shiva");
+		((LinkedList<String>) re).removeLastOccurrence("hello");
+		return re;
+	}
+	public static List<String> linkedlist(List<String> lis2){
+		List<String> l=new LinkedList<String>();
+		l.addAll(lis2);
+		l.add(0,"matt added into linked list");
+		((LinkedList<String>) l).addFirst("firstly");
+		((LinkedList<String>) l).addLast("lastly");
+		List<String> l1=new LinkedList<String>();
+		l1.add("shrey");
+		l1.add("hello");
+		l.addAll(1, l1);
+		return l;
 	}
 	public static void serialization(List<ArrayFunctionality> l) {
 		try {
