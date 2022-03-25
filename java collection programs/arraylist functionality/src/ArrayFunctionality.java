@@ -30,6 +30,10 @@ class Displays extends MainArray{
 		System.out.println("\n\nupdated list afte reversing: ");
 		linkrev.forEach(c->{System.out.println(c);});
 	}
+	public void displayset(Set<String> set) {
+		System.out.println("\n\nupdated set after adding element: ");
+		set.forEach(d->{System.out.println(d);});
+	}
 }
 
 class LinkedLIST extends MainArray{
@@ -43,6 +47,23 @@ class LinkedLIST extends MainArray{
 		return re;	
 	}
 }
+class SetFunctionality extends MainArray{
+	public void addtoset(ArrayFunctionality s1,ArrayFunctionality s2,ArrayFunctionality s3, ArrayFunctionality s4,List<String> re) {
+		Set<ArrayFunctionality> s=new HashSet<ArrayFunctionality>(); //created a set of type array functionality
+		s.add(s1);
+		s.add(s2);
+		s.add(s3);
+		s.add(s4);
+		System.out.println("printing the set functionality");
+		s.forEach(a->{System.out.println("name-> "+a.name+" gender-> "+a.gender+" age-> "+a.age+" salary-> "+a.salary);});
+		Set<String> set=new HashSet<String>(re); //created set and adding element from list of string //typeconversion from other collection 
+		set.add("set elment added");// set element added along with the array element
+		set.add("ramesh");//indexing is not possible as it is unordered set of element
+		Displays d=new Displays();
+		d.displayset(set);
+		
+	}
+}
 
 class MainArray{
 	public static void main(String args[]) {
@@ -51,6 +72,7 @@ class MainArray{
 		ArrayFunctionality ar2=new ArrayFunctionality("shivani","female",25,30000);
 		ArrayFunctionality arr3=new ArrayFunctionality("shalu","female",23,39000);
 		List<ArrayFunctionality> l=addtolist(arr,arr1,ar2,arr3);
+		
 		System.out.println("printing the array functionality");
 		l.forEach(a->{System.out.println("name-> "+a.name+" gender-> "+a.gender+" age-> "+a.age+" salary-> "+a.salary);});
 		List<String> lis2=addelement();
@@ -73,8 +95,12 @@ class MainArray{
 		List<String> re=linklist.reverse(linkedre);
 		d.displayreverse(re);
 		
+		SetFunctionality s=new SetFunctionality();
+		s.addtoset(arr,arr1,ar2,arr3,re);
+		
 		
 	}
+	
 
 	public static List<String> linkedremove(List<String> re){
 		re.remove(0);
