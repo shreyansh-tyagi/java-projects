@@ -34,10 +34,11 @@ class Displays extends MainArray{
 
 class LinkedLIST extends MainArray{
 	public List<String> reverse(List<String> re) {
-		Iterator<String> i=((LinkedList<String>) re).descendingIterator();
+	//	System.out.println("\n\nafter reversing: ");
+		/*Iterator<String> i=((LinkedList<String>) re).descendingIterator();
 		while(i.hasNext()) {
 			System.out.print(" "+i); // one way reversing the list using iterator descending function where we have to add the cast to the iterator
-		}
+		}*/
 		Collections.reverse(re);
 		return re;	
 	}
@@ -59,6 +60,7 @@ class MainArray{
 		serialization(l);
 		
 		Displays d=new Displays();
+		LinkedLIST linklist=new LinkedLIST();
 		List<String> linkedlist=linkedlist(lis2);
 		d.displaylist(linkedlist);
 		
@@ -67,7 +69,7 @@ class MainArray{
 		List<String> linkedre=linkedremove(linkedlist);
 		d.displayremove(linkedre);
 		
-		LinkedLIST linklist=new LinkedLIST();
+		
 		List<String> re=linklist.reverse(linkedre);
 		d.displayreverse(re);
 		
