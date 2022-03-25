@@ -62,12 +62,14 @@ class MainArray{
 		List<String> linkedlist=linkedlist(lis2);
 		d.displaylist(linkedlist);
 		
-		LinkedLIST linklist=new LinkedLIST();
-		List<String> re=linklist.reverse(linkedlist);
-		d.displayreverse(re);
+		
 		
 		List<String> linkedre=linkedremove(linkedlist);
 		d.displayremove(linkedre);
+		
+		LinkedLIST linklist=new LinkedLIST();
+		List<String> re=linklist.reverse(linkedre);
+		d.displayreverse(re);
 		
 		
 	}
