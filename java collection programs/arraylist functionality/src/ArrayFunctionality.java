@@ -32,14 +32,25 @@ class MainArray{
 		l.add(arr3);
 		return l;
 	}
-	public static List<ArrayFunctionality> addelement(List<ArrayFunctionality> l){
+	public static List<String> addelement(){
 		List<String> l1=new ArrayList<String>();
 		l1.add("ravi");
 		l1.add("sonu");
 		System.out.println("l2 list now: "+l1);
 		l1.add(1, "shrey at index 1");
+		List<String> l2=new ArrayList<String>();
+		l2.add("shiva");
+		l2.add(1,"shalu");
+		l1.addAll(l2); //added whole l2 list inside l1
+		l1.addAll(0,l2); //added whole l2 list inside l1 at index 0
+		System.out.println("updatded list is: "+l1);
+		removeelement(l1);
+		return l1;
 		
 	   
+		
+	}
+	public static List<String> removeelement(List<String> l1){
 		
 	}
 }
