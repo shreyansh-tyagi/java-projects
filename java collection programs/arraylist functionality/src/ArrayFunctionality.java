@@ -1,5 +1,5 @@
 import java.util.*;
-import java.lang.*;
+//import java.lang.*;
 public class ArrayFunctionality {
 	String name,gender;
 	int age;
@@ -21,8 +21,11 @@ class MainArray{
 		ArrayFunctionality arr3=new ArrayFunctionality("shalu","female",23,39000);
 		List<ArrayFunctionality> l=addtolist(arr,arr1,ar2,arr3);
 		System.out.println("printing the array functionality");
-		l.forEach(a->{System.out.println("name-> "+a.name+"gender-> "+a.gender+"age-> "+a.age+"salary-> "+a.salary);});
-		addelement(l);
+		l.forEach(a->{System.out.println("name-> "+a.name+" gender-> "+a.gender+" age-> "+a.age+" salary-> "+a.salary);});
+		List<String> lis2=addelement();
+		System.out.println("let see the element of list 2: "+lis2);
+		List<String> lis3=retainelement(lis2);
+		System.out.println("after retaining the element: "+lis3);
 	}
 	public static List<ArrayFunctionality> addtolist(ArrayFunctionality arr,ArrayFunctionality arr1,ArrayFunctionality ar2,ArrayFunctionality arr3){
 		List<ArrayFunctionality> l=new ArrayList<ArrayFunctionality>();
@@ -44,13 +47,34 @@ class MainArray{
 		l1.addAll(l2); //added whole l2 list inside l1
 		l1.addAll(0,l2); //added whole l2 list inside l1 at index 0
 		System.out.println("updatded list is: "+l1);
-		removeelement(l1);
-		return l1;
+		List<String> lis1=removeelement(l1,l2);
+		System.out.println("is the list is empty: "+lis1.isEmpty());
+		return l2;
 		
 	   
 		
 	}
-	public static List<String> removeelement(List<String> l1){
+	public static List<String> removeelement(List<String> l1,List<String> l2){
+		l1.remove("ravi");
+		l1.remove(0);
+		l1.add(0,"shanu");
+		l1.removeAll(l2);
+		System.out.println("list after the element has been removed: "+l1);
+		l1.removeIf(str->str.contains("shiva"));
+		System.out.println("updated list after removing the element: "+l1);
+		l1.clear();
+		System.out.println("after clearing the list is: "+l1);
+		return l1;
+		
+		
+	}
+	public static List<String> retainelement(List<String> l2){
+		List<String> l3=new ArrayList<String>();
+		l3.add("shalu");
+		l3.add("ravi");
+		l2.retainAll(l3);
+		l2.forEach(a->{System.out.println(a);});
+		return l2;
 		
 	}
 }
