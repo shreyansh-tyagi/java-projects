@@ -26,6 +26,10 @@ class Displays extends MainArray{
 		System.out.println("\n\nupdated list after removing: ");
 		linkedre.forEach(b->{System.out.println(b);});
 	}
+	public void displayreverse(List<String> linkrev) {
+		System.out.println("\n\nupdated list afte reversing: ");
+		linkrev.forEach(c->{System.out.println(c);});
+	}
 }
 
 class LinkedLIST extends MainArray{
@@ -53,13 +57,18 @@ class MainArray{
 		List<String> lis3=retainelement(lis2);
 		System.out.println("after retaining the element: "+lis3);
 		serialization(l);
+		
 		Displays d=new Displays();
 		List<String> linkedlist=linkedlist(lis2);
 		d.displaylist(linkedlist);
-		List<String> linkedre=linkedremove(linkedlist);
+		
 		LinkedLIST linklist=new LinkedLIST();
-		d.displayremove(linkedre);
 		List<String> re=linklist.reverse(linkedlist);
+		d.displayreverse(re);
+		
+		List<String> linkedre=linkedremove(linkedlist);
+		d.displayremove(linkedre);
+		
 		
 	}
 
