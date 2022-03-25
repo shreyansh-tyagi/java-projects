@@ -19,16 +19,23 @@ public class ArrayFunctionality {
 
 class Displays extends MainArray{
 	public  void displaylist (List<String> linkedlist){
+		System.out.println("\n\nupdated list after adding: ");
 		linkedlist.forEach(a->{System.out.println(a);});
 	}
 	public void displayremove(List<String> linkedre) {
+		System.out.println("\n\nupdated list after removing: ");
 		linkedre.forEach(b->{System.out.println(b);});
 	}
 }
 
 class LinkedLIST extends MainArray{
-	public void reverse(List<String> re) {
-		
+	public List<String> reverse(List<String> re) {
+		Iterator<String> i=((LinkedList<String>) re).descendingIterator();
+		while(i.hasNext()) {
+			System.out.print(" "+i); // one way reversing the list using iterator descending function where we have to add the cast to the iterator
+		}
+		Collections.reverse(re);
+		return re;	
 	}
 }
 
@@ -50,7 +57,10 @@ class MainArray{
 		List<String> linkedlist=linkedlist(lis2);
 		d.displaylist(linkedlist);
 		List<String> linkedre=linkedremove(linkedlist);
+		LinkedLIST linklist=new LinkedLIST();
 		d.displayremove(linkedre);
+		List<String> re=linklist.reverse(linkedlist);
+		
 	}
 
 	public static List<String> linkedremove(List<String> re){
