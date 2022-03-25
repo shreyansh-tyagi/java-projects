@@ -18,5 +18,13 @@ class MainArray{
 		ArrayFunctionality arr1=new ArrayFunctionality("shreyansh tyagi","male",24,67500);
 		ArrayFunctionality ar2=new ArrayFunctionality("shivani","female",25,30000);
 		ArrayFunctionality arr3=new ArrayFunctionality("shalu","female",23,39000);
+		addtolist(arr,arr1,ar2,arr3);
+	}
+	public static List<ArrayFunctionality> addtolist(ArrayFunctionality arr,ArrayFunctionality arr1,ArrayFunctionality ar2,ArrayFunctionality arr3){
+		List<ArrayFunctionality> l=new ArrayList<ArrayFunctionality>();
+		l.add(arr);
+		l.add(arr1);
+		l.add(ar2);
+		l.add(arr3);
 	}
 }
