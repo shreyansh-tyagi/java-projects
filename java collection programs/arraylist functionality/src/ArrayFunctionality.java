@@ -1,5 +1,6 @@
 import java.util.*;
 //import java.lang.*;
+import java.io.*;
 public class ArrayFunctionality {
 	String name,gender;
 	int age;
@@ -26,6 +27,27 @@ class MainArray{
 		System.out.println("let see the element of list 2: "+lis2);
 		List<String> lis3=retainelement(lis2);
 		System.out.println("after retaining the element: "+lis3);
+		serialization(l);
+	}
+	public static void serialization(List<ArrayFunctionality> l) {
+		try {
+			//serialization
+			FileOutputStream f=new FileOutputStream("file"); //creating the output stream
+			ObjectOutputStream o=new ObjectOutputStream(f); //creating the object of output stream
+			o.writeObject(l); //writing the data inside the file
+			f.close();
+			o.close();
+			//deserialization
+			FileInputStream i=new FileInputStream("file"); //creating the input stream
+			ObjectInputStream o1=new ObjectInputStream(i); //creating the object of input stream
+			ArrayFunctionality a=(ArrayFunctionality)o1.readObject(); //as the data is of type arrayfunctionality type therefore creating the variable of same type
+			System.out.println(a);
+			o1.close();
+			i.close();
+		}
+		catch(Exception e) {
+			System.out.println(e);
+		}
 	}
 	public static List<ArrayFunctionality> addtolist(ArrayFunctionality arr,ArrayFunctionality arr1,ArrayFunctionality ar2,ArrayFunctionality arr3){
 		List<ArrayFunctionality> l=new ArrayList<ArrayFunctionality>();
