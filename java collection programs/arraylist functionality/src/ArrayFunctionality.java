@@ -34,10 +34,18 @@ class Displays extends MainArray{
 		System.out.println("\n\nupdated set after adding element: ");
 		set.forEach(d->{System.out.println(d);});
 	}
-	public void displaytreeoperation(Set<String> treeset) {
-		
-		
+	public void displaytreeoperation(TreeSet<String> treeset) {
+		System.out.println("\n\nreverse treeset is: "+treeset);
+		System.out.println("pollfirst is: "+((TreeSet<String>) treeset).pollFirst());
+		System.out.println("pollast is: "+treeset.pollLast());
+		System.out.println("updated treeset is:"+treeset); //using pollfirst and polllast the largest and smallest value is retreived and removed 
+        System.out.println("headset treeset is:"+treeset.headSet("ramesh")); //it take element upto ramesh excluding the ramesh
+        System.out.println("headset with boolean value: "+treeset.headSet("ramesh", true)); //here true means include the element and false mean exclude the element
+        System.out.println("subset in treeset: "+treeset.subSet("set element added",false,"rajat",true));
+	    System.out .println("tailset in treeset: "+treeset.tailSet("set element added", false));//it will give element upto 'set element added' after excluding it as false vlaue is used 
+	   
 	}
+	
 }
 
 class LinkedLIST extends MainArray{
@@ -63,7 +71,7 @@ class Treesets extends MainArray{
 	public void operation(Set<String> op) {
 		TreeSet<String> t=(TreeSet<String>) ((TreeSet<String>) op).descendingSet();
 		Displays d=new Displays();
-		d.displaytreeoperation(t);
+		d.displaytreeoperation(t); 
 	}
 }
 
@@ -80,6 +88,7 @@ class SetFunctionality extends MainArray{
 		Set<String> set=new HashSet<String>(re); //created set and adding element from list of string //typeconversion from other collection 
 		set.add("set elment added");// set element added along with the array element
 		set.add("ramesh");//indexing is not possible as it is unordered set of element
+		set.add("rajat");
 		Displays d=new Displays();
 		d.displayset(set);
 		Treesets t=new Treesets();
