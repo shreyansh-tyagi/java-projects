@@ -47,6 +47,10 @@ class LinkedLIST extends MainArray{
 		return re;	
 	}
 }
+
+class Treesets extends MainArray{
+	
+}
 class SetFunctionality extends MainArray{
 	public void addtoset(ArrayFunctionality s1,ArrayFunctionality s2,ArrayFunctionality s3, ArrayFunctionality s4,List<String> re) {
 		Set<ArrayFunctionality> s=new HashSet<ArrayFunctionality>(); //created a set of type array functionality
