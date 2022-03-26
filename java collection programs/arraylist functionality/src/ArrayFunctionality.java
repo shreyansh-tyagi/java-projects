@@ -34,6 +34,10 @@ class Displays extends MainArray{
 		System.out.println("\n\nupdated set after adding element: ");
 		set.forEach(d->{System.out.println(d);});
 	}
+	public void displaytreeoperation(Set<String> treeset) {
+		
+		
+	}
 }
 
 class LinkedLIST extends MainArray{
@@ -49,8 +53,21 @@ class LinkedLIST extends MainArray{
 }
 
 class Treesets extends MainArray{
-	
+
+	public void treeset(Set<String> sets) {
+		SortedSet<String> s=new TreeSet<String>(sets);
+		s.add("value added to treeset");
+		operation(s);
+		
+	}
+	public void operation(Set<String> op) {
+		TreeSet<String> t=(TreeSet<String>) ((TreeSet<String>) op).descendingSet();
+		Displays d=new Displays();
+		d.displaytreeoperation(t);
+	}
 }
+
+
 class SetFunctionality extends MainArray{
 	public void addtoset(ArrayFunctionality s1,ArrayFunctionality s2,ArrayFunctionality s3, ArrayFunctionality s4,List<String> re) {
 		Set<ArrayFunctionality> s=new HashSet<ArrayFunctionality>(); //created a set of type array functionality
@@ -65,6 +82,8 @@ class SetFunctionality extends MainArray{
 		set.add("ramesh");//indexing is not possible as it is unordered set of element
 		Displays d=new Displays();
 		d.displayset(set);
+		Treesets t=new Treesets();
+		t.treeset(set);
 		
 	}
 }
