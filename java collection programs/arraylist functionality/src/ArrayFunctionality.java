@@ -78,6 +78,11 @@ class Treesets extends MainArray{
 
 class QueueDeque extends SetFunctionality{
 	public void queue(Set<String> q) {
+	Queue<String> qu=new PriorityQueue<String>(q);
+	qu.add("queue added");
+	queoperation(qu);	
+	}
+	public void queoperation(Queue<String> qu) {
 		
 	}
 }
