@@ -126,8 +126,28 @@ class SetFunctionality extends MainArray{
 		t.treeset(set);
 		QueueDeque q=new QueueDeque();
 		q.queue(set);
+		Mapping m=new Mapping();
+		m.mapoperation();
 		
 	}
+}
+
+
+class Mapping{
+	public void mapoperation() {
+		Map<Integer,String> m=new HashMap<Integer,String>();
+		m.put(2,"string 1");
+		m.put(10, "sting 3");
+		m.put(30,"string 4");
+		m.put(13,"string 4"); //added element into the map using put method which take key and value
+		m.entrySet(); //converted to set
+		m.forEach(a.entrySet()->{System.out)
+		
+	}
+	
+	 
+	
+	
 }
 
 class MainArray{
@@ -259,3 +279,6 @@ class MainArray{
 		
 	}
 }
+
+
+
