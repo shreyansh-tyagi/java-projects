@@ -48,6 +48,7 @@ class Displays extends MainArray{
 	
 }
 
+
 class LinkedLIST extends MainArray{
 	public List<String> reverse(List<String> re) {
 	//	System.out.println("\n\nafter reversing: ");
@@ -75,6 +76,11 @@ class Treesets extends MainArray{
 	}
 }
 
+class QueueDeque extends SetFunctionality{
+	public void queue(Set<String> q) {
+		
+	}
+}
 
 class SetFunctionality extends MainArray{
 	public void addtoset(ArrayFunctionality s1,ArrayFunctionality s2,ArrayFunctionality s3, ArrayFunctionality s4,List<String> re) {
@@ -93,6 +99,8 @@ class SetFunctionality extends MainArray{
 		d.displayset(set);
 		Treesets t=new Treesets();
 		t.treeset(set);
+		QueueDeque q=new QueueDeque();
+		q.queue(set);
 		
 	}
 }
