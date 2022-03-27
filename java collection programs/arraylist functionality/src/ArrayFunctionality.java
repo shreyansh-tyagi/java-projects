@@ -45,6 +45,12 @@ class Displays extends MainArray{
 	    System.out .println("tailset in treeset: "+treeset.tailSet("set element added", false));//it will give element upto 'set element added' after excluding it as false vlaue is used 
 	   
 	}
+	public void displayqueue(Queue<String> qu) {
+		System.out.println("after removing the element from the queue: ");
+		qu.remove();
+		qu.poll();
+		System.out.println(qu);
+	}
 	
 }
 
@@ -84,6 +90,10 @@ class QueueDeque extends SetFunctionality{
 	}
 	public void queoperation(Queue<String> qu) {
 		System.out.println("head of queue: "+qu.element());
+		System.out.println("peek of the queue: "+qu.peek());
+		Displays d=new Displays();
+		d.displayqueue(qu);
+		
 		
 	}
 }
