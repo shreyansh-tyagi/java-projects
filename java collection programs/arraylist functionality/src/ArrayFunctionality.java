@@ -157,6 +157,7 @@ class Mapping{
 		
 		comparision(m);
 		hashmap(m);
+		
 
 	}
 
@@ -177,21 +178,35 @@ class Mapping{
 		
 	}
 	public void hashmap(Map<Integer,String> m) {
-		System.out.println("iterating hashmap: ");
+		System.out.println("\n\niterating hashmap: ");
 		m.forEach((k,v)->System.out.println("keys: "+k+" values: "+v));
-		System.out.println("adding the duplicate key values: ");
+		System.out.println("\n\nadding the duplicate key values: ");
 		m.put(2,"string 2");
 		m.put(30,"string 30");
 		m.forEach((k,v)->System.out.println("keys: "+k+" values: "+v));
-		System.out.println("checking whether the element is present in hashmap if not then add: ");
-		m.putIfAbsent(10,"string 10");
+		System.out.println("\n\nchecking whether the element is present in hashmap if not then add: ");
+		m.putIfAbsent(11,"string 10"); //it will check whether the particular key is present in the map
+		m.forEach((k,v)->{System.out.println("keys: "+k+" values: "+v);});
 		Map<Integer,String> m1=new HashMap<Integer,String>();
 		m1.put(101,"String 101");
 		m1.put(99,"string 91");
-		System.out.println("after putting the another hashmap inside exiting map: \n");
+		System.out.println("\n\nnew hashmap: ");
+		m1.forEach((k,v)->System.out.println("keys: "+k+" values: "+v));
+		System.out.println("\n\nafter putting the another hashmap inside exiting map: \n");
 		m.putAll(m1);
 		m.forEach((k,v)->{System.out.println("keys: "+k+" values: "+v);});
-		
+		System.out.println("\n\nafter sorting: ");
+		m.entrySet().stream().sorted(Map.Entry.comparingByKey()).forEach(System.out::println);
+		System.out.println("\n\nreverse after sorting: ");
+		m.entrySet().stream().sorted(Map.Entry.comparingByKey(Comparator.reverseOrder())).forEach(System.out::println);
+		linkhashmap(m);
+	}
+	public void linkhashmap(Map<Integer,String> m) {
+		Map<Integer,String> m1=new LinkedHashMap<Integer,String>(m);
+		m1.put(121,"string 21");
+		System.out.println("\n\ntraversing the linkedhashmap: \n"+m1.entrySet());
+		System.out.println("\n\nkeys: "+m1.keySet());
+		System.out.println("\n\nvalues:"+m1.values());
 		
 		
 	}
