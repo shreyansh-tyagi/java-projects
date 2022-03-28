@@ -227,6 +227,8 @@ class Mapping{
 		System.out.println("\n\nusing getOrDefault: "+m1.getOrDefault(233, "not found in the hashtable"));
 		m1.putIfAbsent(233, "now found in the hashtable");
 		System.out.println("\n\nusing putifabsent: "+m1.entrySet());
+		System.out.println("\n\nsorting hashtable according to keys: ");
+		m1.entrySet().stream().sorted(Map.Entry.comparingByKey()).forEach(System.out::println);
 	    
 	}
 	
