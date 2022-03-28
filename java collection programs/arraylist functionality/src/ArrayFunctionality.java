@@ -207,15 +207,26 @@ class Mapping{
 		System.out.println("\n\ntraversing the linkedhashmap: \n"+m1.entrySet());
 		System.out.println("\n\nkeys: "+m1.keySet());
 		System.out.println("\n\nvalues:"+m1.values());
+		System.out.println("\n\n");
+		treemap(m1);
+		
+	}
+	public void treemap(Map<Integer,String> m) {
+		SortedMap<Integer,String> m1=new TreeMap<Integer,String>(m);
+		m1.put(31, null);
+		m1.remove(32);
 		
 		
 	}
+	
 	public void  linkedhashfunctionality (ArrayFunctionality s1,ArrayFunctionality s2,ArrayFunctionality s3, ArrayFunctionality s4) {
 		Map<Integer,ArrayFunctionality> m=new LinkedHashMap<Integer,ArrayFunctionality>();
 		m.put(11, s1);
 		m.put(3, s2);
 		m.put(32, s4);
 		m.put(21, s3);
+		System.out.println("Arrayfunctionality pass as value inside linkedhashmap: ");
+		m.forEach((k,v)->{System.out.println("Keys: "+k+"   names: "+v.name+"   geneder: "+v.gender+"   age: "+v.age+"   salary: "+v.salary);});
 		
 	}
 		
