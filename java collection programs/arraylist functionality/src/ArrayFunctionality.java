@@ -209,12 +209,51 @@ class Mapping{
 		System.out.println("\n\nvalues:"+m1.values());
 		System.out.println("\n\n");
 		treemap(m1);
+		hashtable(m1);
 		
 	}
+	public void hashtable(Map<Integer,String> m) {
+	
+		Map<Integer,String> m1=new Hashtable<Integer,String>(m);
+		//using the hashtable class from map interface
+		//Hashtable<Integer,String> m1=new Hashtable<Integer,String>(m);
+		m1.put(21, "string 21");
+		System.out.println("\n\nhashtable after traversing: ");
+		m1.forEach((k,v)->{System.out.println("keys: "+k+" values: "+v);});
+		System.out.println("\n\nafter removing: ");
+		m1.remove(101);
+		m1.forEach((k,v)->{System.out.println("keys: "+k+" values: "+v);});
+		System.out.println("\n\nusing getOrDefault: "+m1.getOrDefault(21, "not found in the hashtable"));
+	
+	}
+	
+	
 	public void treemap(Map<Integer,String> m) {
 		SortedMap<Integer,String> m1=new TreeMap<Integer,String>(m);
+		//Map<Integer,String> m1=new TreeMap<Integer,String>(m);
+		//treemap is a class under sortedmap interface which is the subinterface of map interface
+		//sortedmap and navigable map is the subinterface of map interface 
 		m1.put(31, null);
-		m1.remove(32);
+		System.out.println("\n\ntreemap after traversing: ");
+		m1.forEach((k,v)->{System.out.println("keys: "+k+" values: "+v);});
+		System.out.println("\n\nafter removing: ");
+		m1.remove(30);
+		
+		m1.forEach((k,v)->{System.out.println("keys: "+k+" values: "+v);});
+		System.out.println("\n\ndescendingMap: "+((TreeMap<Integer, String>) m1).descendingMap());  
+		//same line can be written by creating the object of navigable interface by which we need not to add the cast while declaring
+		NavigableMap<Integer,String> n=new TreeMap<Integer,String>(m1);
+		//here navigable map is the subinterface of map interface in which we are using the tree map class so that we can use some functionality 
+		//of navigable interface without typecasting
+		System.out.println("\n\ndescendingMap: "+n.descendingMap()); 
+		System.out.println("\n\nheadMap: "+n.headMap(99,true));
+		System.out.println("\n\ntailMap: "+n.headMap(31,true));
+		System.out.println("\n\nsubMap: "+n.subMap(2,false,101,true));
+		System.out.println("\n\nsorting treemap according to keys: ");
+		n.entrySet().stream().sorted(Map.Entry.comparingByKey()).forEach(System.out::println);
+		System.out.println("\n\nsorting treemap according to values: in reverse ");
+		n.entrySet().stream().sorted(Map.Entry.comparingByKey(Comparator.reverseOrder())).forEach(System.out::println);
+		
 		
 		
 	}
@@ -225,7 +264,7 @@ class Mapping{
 		m.put(3, s2);
 		m.put(32, s4);
 		m.put(21, s3);
-		System.out.println("Arrayfunctionality pass as value inside linkedhashmap: ");
+		System.out.println("\n\nArrayfunctionality pass as value inside linkedhashmap: ");
 		m.forEach((k,v)->{System.out.println("Keys: "+k+"   names: "+v.name+"   geneder: "+v.gender+"   age: "+v.age+"   salary: "+v.salary);});
 		
 	}
