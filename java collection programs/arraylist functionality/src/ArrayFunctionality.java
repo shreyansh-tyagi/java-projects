@@ -211,6 +211,11 @@ class Mapping{
 		
 	}
 	public void  linkedhashfunctionality (ArrayFunctionality s1,ArrayFunctionality s2,ArrayFunctionality s3, ArrayFunctionality s4) {
+		Map<Integer,ArrayFunctionality> m=new LinkedHashMap<Integer,ArrayFunctionality>();
+		m.put(11, s1);
+		m.put(3, s2);
+		m.put(32, s4);
+		m.put(21, s3);
 		
 	}
 		
