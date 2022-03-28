@@ -140,20 +140,30 @@ class Mapping{
 		m.put(2,"string 1");
 		m.put(10, "sting 3");
 		m.put(30,"string 4");
-		m.put(13,"string 4"); //added element into the map using put method which take key and value
+		m.put(13,"string 6"); //added element into the map using put method which take key and value
 		//using for each loop
-		for(Entry<Integer, String> a:m.entrySet()) { //Entry is subinterface of Map
+		for(Entry<Integer, String> a:m.entrySet()) { //Entry is subinterface of Map because map cannot be traversed
 			//therefore two way of defining the same thing
 			/* for(Map.Entry<Integer,String> a:m.entrySet()) */
-			
+			System.out.println("keys: "+a.getKey()+" values: "+a.getValue());
 			
 		}
+		//using the forEach method same line of code can be done in single line
+		m.forEach((k,v)->{System.out.println("\nKeys: "+k+"\nvalues: "+v);});
+		
+		comparision(m);
+
+	}
+
+	public void comparision(Map<Integer, String> m) {
+		//converting the map into set so that it can be traversed
+		//stream method will return a stream with a collection of data
+		//sorting the data according to the comparator 
+		//then using for each method to perform the printing action on the element present in the stream
+		m.entrySet().stream().sorted(Map.Entry.comparingByKey()).forEach(System.out::println);
 		
 	}
-	
-	 
-	
-	
+		
 }
 
 class MainArray{
