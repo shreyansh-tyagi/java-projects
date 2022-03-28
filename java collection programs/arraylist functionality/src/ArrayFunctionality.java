@@ -210,6 +210,9 @@ class Mapping{
 		
 		
 	}
+	public void  linkedhashfunctionality (ArrayFunctionality s1,ArrayFunctionality s2,ArrayFunctionality s3, ArrayFunctionality s4) {
+		
+	}
 		
 }
 
@@ -245,6 +248,9 @@ class MainArray{
 		
 		SetFunctionality s=new SetFunctionality();
 		s.addtoset(arr,arr1,ar2,arr3,re);
+		
+		Mapping m=new Mapping();
+		m.linkedhashfunctionality(arr,arr1,ar2,arr3);
 		
 		
 	}
