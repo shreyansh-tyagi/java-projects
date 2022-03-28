@@ -108,7 +108,7 @@ class QueueDeque extends SetFunctionality{
 	}
 }
 
-class SetFunctionality extends MainArray{
+class SetFunctionality extends MainArray{ 
 	public void addtoset(ArrayFunctionality s1,ArrayFunctionality s2,ArrayFunctionality s3, ArrayFunctionality s4,List<String> re) {
 		Set<ArrayFunctionality> s=new HashSet<ArrayFunctionality>(); //created a set of type array functionality
 		s.add(s1);
@@ -156,6 +156,7 @@ class Mapping{
 		m.forEach((k,v)->{System.out.println("Keys: "+k+"  values: "+v);System.out.println();});
 		
 		comparision(m);
+		hashmap(m);
 
 	}
 
@@ -173,6 +174,11 @@ class Mapping{
 		System.out.println("\ncomparing by values in descending order: ");
 		m.entrySet().stream().sorted(Map.Entry.comparingByValue(Comparator.reverseOrder())).forEach(System.out::println);
 		
+		
+	}
+	public void hashmap(Map<Integer,String> m) {
+		System.out.println("iterating hashmap: ");
+		m.forEach((k,v)->System.out.println("keys: "+k+" values: "+v));
 		
 	}
 		
