@@ -224,7 +224,10 @@ class Mapping{
 		m1.remove(101);
 		m1.forEach((k,v)->{System.out.println("keys: "+k+" values: "+v);});
 		System.out.println("\n\nusing getOrDefault: "+m1.getOrDefault(21, "not found in the hashtable"));
-	
+		System.out.println("\n\nusing getOrDefault: "+m1.getOrDefault(233, "not found in the hashtable"));
+		m1.putIfAbsent(233, "now found in the hashtable");
+		System.out.println("\n\nusing putifabsent: "+m1.entrySet());
+	    
 	}
 	
 	
