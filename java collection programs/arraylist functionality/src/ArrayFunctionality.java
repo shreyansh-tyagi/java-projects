@@ -138,18 +138,22 @@ class Mapping{
 	public void mapoperation() {
 		Map<Integer,String> m=new HashMap<Integer,String>();
 		m.put(2,"string 1");
-		m.put(10, "sting 3");
-		m.put(30,"string 4");
-		m.put(13,"string 6"); //added element into the map using put method which take key and value
+		m.put(30, "string 3");
+		m.put(10,"string 4");
+		m.put(1,"string 6"); //added element into the map using put method which take key and value
 		//using for each loop
+		
 		for(Entry<Integer, String> a:m.entrySet()) { //Entry is subinterface of Map because map cannot be traversed
 			//therefore two way of defining the same thing
 			/* for(Map.Entry<Integer,String> a:m.entrySet()) */
-			System.out.println("keys: "+a.getKey()+" values: "+a.getValue());
+			System.out.println("keys: "+a.getKey()+"  values: "+a.getValue());
+			
 			
 		}
+		System.out.println();
+		m.replace(1, "string 9");
 		//using the forEach method same line of code can be done in single line
-		m.forEach((k,v)->{System.out.println("\nKeys: "+k+"\nvalues: "+v);});
+		m.forEach((k,v)->{System.out.println("Keys: "+k+"  values: "+v);System.out.println();});
 		
 		comparision(m);
 
@@ -160,7 +164,15 @@ class Mapping{
 		//stream method will return a stream with a collection of data
 		//sorting the data according to the comparator 
 		//then using for each method to perform the printing action on the element present in the stream
+		System.out.println("\ncomparing by keys: ");
 		m.entrySet().stream().sorted(Map.Entry.comparingByKey()).forEach(System.out::println);
+		System.out.println("\ncomparing by keys in descending order: ");
+		m.entrySet().stream().sorted(Map.Entry.comparingByKey(Comparator.reverseOrder())).forEach(System.out::println);
+		System.out.println("\ncomparing by values: ");
+		m.entrySet().stream().sorted(Map.Entry.comparingByValue()).forEach(System.out::println);
+		System.out.println("\ncomparing by values in descending order: ");
+		m.entrySet().stream().sorted(Map.Entry.comparingByValue(Comparator.reverseOrder())).forEach(System.out::println);
+		
 		
 	}
 		
