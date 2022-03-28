@@ -1,4 +1,5 @@
 import java.util.*;
+import java.util.Map.Entry;
 //import java.lang.*;
 import java.io.*;
 public class ArrayFunctionality {
@@ -140,8 +141,13 @@ class Mapping{
 		m.put(10, "sting 3");
 		m.put(30,"string 4");
 		m.put(13,"string 4"); //added element into the map using put method which take key and value
-		m.entrySet(); //converted to set
-		m.forEach(a->{System.out.println(a.getKey()+" "+a.getValue());});
+		//using for each loop
+		for(Entry<Integer, String> a:m.entrySet()) { //Entry is subinterface of Map
+			//therefore two way of defining the same thing
+			/* for(Map.Entry<Integer,String> a:m.entrySet()) */
+			
+			
+		}
 		
 	}
 	
