@@ -151,7 +151,7 @@ class Mapping{
 			
 		}
 		System.out.println();
-		m.replace(1, "string 9");
+		m.replace(1, "string 9"); //replacing the value of 1 key from string 6 to string 9
 		//using the forEach method same line of code can be done in single line
 		m.forEach((k,v)->{System.out.println("Keys: "+k+"  values: "+v);System.out.println();});
 		
@@ -178,6 +178,10 @@ class Mapping{
 	}
 	public void hashmap(Map<Integer,String> m) {
 		System.out.println("iterating hashmap: ");
+		m.forEach((k,v)->System.out.println("keys: "+k+" values: "+v));
+		System.out.println("adding the duplicate key values: ");
+		m.put(2,"string 2");
+		m.put(30,"string 30");
 		m.forEach((k,v)->System.out.println("keys: "+k+" values: "+v));
 		
 	}
