@@ -141,7 +141,7 @@ class Mapping{
 		m.put(30,"string 4");
 		m.put(13,"string 4"); //added element into the map using put method which take key and value
 		m.entrySet(); //converted to set
-		m.forEach(a.entrySet()->{System.out)
+		m.forEach(a->{System.out.println(a.getKey()+" "+a.getValue());});
 		
 	}
 	
