@@ -183,6 +183,16 @@ class Mapping{
 		m.put(2,"string 2");
 		m.put(30,"string 30");
 		m.forEach((k,v)->System.out.println("keys: "+k+" values: "+v));
+		System.out.println("checking whether the element is present in hashmap if not then add: ");
+		m.putIfAbsent(10,"string 10");
+		Map<Integer,String> m1=new HashMap<Integer,String>();
+		m1.put(101,"String 101");
+		m1.put(99,"string 91");
+		System.out.println("after putting the another hashmap inside exiting map: \n");
+		m.putAll(m1);
+		m.forEach((k,v)->{System.out.println("keys: "+k+" values: "+v);});
+		
+		
 		
 	}
 		
