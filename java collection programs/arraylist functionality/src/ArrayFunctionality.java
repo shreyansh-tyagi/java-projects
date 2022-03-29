@@ -287,8 +287,10 @@ class Mapping{
 		System.out.println("\n\nsorting hashtable according to keys: ");
 		m1.entrySet().stream().sorted(Map.Entry.comparingByKey()).forEach(System.out::println);
 		
-		m1.computeIfAbsent(333, k->"string"+"333");
-	    System.out.println("\n\nusinf compute if absent: "+m1.entrySet());
+		m1.computeIfAbsent(333, k->"string"+" 333");
+	    System.out.println("\n\nusing compute if absent: "+m1.entrySet());
+	    System.out.println("\n\nsorting hashtable after computing in reverse  according to keys: ");
+		m1.entrySet().stream().sorted(Map.Entry.comparingByKey(Comparator.reverseOrder())).forEach(System.out::println);
 	    
 	}
 	
