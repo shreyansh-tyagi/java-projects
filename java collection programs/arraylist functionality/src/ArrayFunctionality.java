@@ -276,6 +276,16 @@ class Mapping{
 		
 }
 
+class Enumoperation{
+	public enum key{ //return type is enum
+		one,two,three,four;
+	}
+	public void operation(ArrayFunctionality s1,ArrayFunctionality s2,ArrayFunctionality s3, ArrayFunctionality s4) {
+		
+		
+	}
+}
+
 class MainArray{
 	public static void main(String args[]) {
 		ArrayFunctionality arr=new ArrayFunctionality("shrey","male",23,37500);
@@ -311,6 +321,9 @@ class MainArray{
 		
 		Mapping m=new Mapping();
 		m.linkedhashfunctionality(arr,arr1,ar2,arr3);
+		
+		Enumoperation e=new Enumoperation();
+		e.operation(arr,arr1,ar2,arr3);
 		
 		
 	}
