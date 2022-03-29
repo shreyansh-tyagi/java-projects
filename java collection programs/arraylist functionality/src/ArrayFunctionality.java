@@ -2,7 +2,7 @@ import java.util.*;
 import java.util.Map.Entry;
 //import java.lang.*;
 import java.io.*;
-public class ArrayFunctionality implements Comparable<ArrayFunctionality> {
+public class ArrayFunctionality implements Comparable<ArrayFunctionality> { //natural or default sorting 
 	String name,gender;
 	int age;
 	float salary;
@@ -23,9 +23,28 @@ public class ArrayFunctionality implements Comparable<ArrayFunctionality> {
 		
 		
 	}
+	
 
 }
 
+//user defined comparator
+//we can make as many comparator we want to make in order to sort the list
+class NameComparator implements Comparator<ArrayFunctionality>{
+	public int compare(ArrayFunctionality a1,ArrayFunctionality a2) {
+		return a1.name.compareTo(a2.name); //comparing the name of a1 object with a2 object
+	}
+}
+
+class AgeComparator implements Comparator<ArrayFunctionality>{
+	public int compare(ArrayFunctionality a1,ArrayFunctionality a2) {
+		if(a1.age==a2.age)
+			return 0;
+		else if(a1.age>a2.age)
+			return 1;
+		else
+			return -1;
+	}
+}
 
 
 class Displays extends MainArray{
@@ -327,8 +346,7 @@ class MainArray{
 		ArrayFunctionality arr3=new ArrayFunctionality("shalu","female",23,39000);
 		List<ArrayFunctionality> l=addtolist(arr,arr1,ar2,arr3);
 		 
-		System.out.println("printing the array functionality");
-		l.forEach(a->{System.out.println("name-> "+a.name+" gender-> "+a.gender+" age-> "+a.age+" salary-> "+a.salary);});
+		
 		List<String> lis2=addelement();
 		System.out.println("let see the element of list 2: "+lis2);
 		List<String> lis3=retainelement(lis2);
@@ -411,6 +429,8 @@ class MainArray{
 		l.add(arr1);
 		l.add(ar2);
 		l.add(arr3);
+		System.out.println("printing the array functionality");
+		l.forEach(a->{System.out.println("name-> "+a.name+" gender-> "+a.gender+" age-> "+a.age+" salary-> "+a.salary);});
 		Collections.sort(l);
 		System.out.println("\n\ncompared by using salary : ");
 		l.forEach(a->{System.out.println("name-> "+a.name+" gender-> "+a.gender+" age-> "+a.age+" salary-> "+a.salary);});
