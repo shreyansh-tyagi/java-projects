@@ -24,7 +24,35 @@ public class ArrayFunctionality implements Comparable<ArrayFunctionality> { //na
 		
 	}
 	
-
+	public String getname() {
+		return name;
+	}
+	
+	public void setname(String name) {
+		this.name=name;
+	}
+	public void  setgender(String gender) {
+		this.gender=gender;
+	}
+	public String getgender() {
+		return gender;
+		
+	}
+	public void setage(int age) {
+		this.age=age;
+		
+	}
+	public int setage() {
+	return age;
+	
+	}
+	public void setsalary(float salary) {
+		this.salary=salary;
+	}
+	public float getsalary()
+	{
+		return salary;
+	}
 }
 
 //user defined comparator
@@ -42,7 +70,7 @@ class AgeComparator implements Comparator<ArrayFunctionality>{
 		else if(a1.age>a2.age)
 			return 1;
 		else
-			return -1;
+			return -1; 
 	}
 }
 
@@ -336,7 +364,16 @@ class CollectionOperation{
 	}
 }
 
-
+class SalaryComparator implements Comparator<ArrayFunctionality>{
+	public int compare(ArrayFunctionality a1,ArrayFunctionality a2) {
+		if (a1.salary==a2.salary)
+			return 0;
+		else if(a1.salary<a2.salary)
+			return 1;
+		else 
+			return -1;
+	}
+}
 
 class MainArray{
 	public static void main(String args[]) {
@@ -432,9 +469,23 @@ class MainArray{
 		System.out.println("printing the array functionality");
 		l.forEach(a->{System.out.println("name-> "+a.name+" gender-> "+a.gender+" age-> "+a.age+" salary-> "+a.salary);});
 		Collections.sort(l);
-		System.out.println("\n\ncompared by using salary : ");
+		System.out.println("\n\ncompared and sorted by using salary : ");
 		l.forEach(a->{System.out.println("name-> "+a.name+" gender-> "+a.gender+" age-> "+a.age+" salary-> "+a.salary);});
 		System.out.println("\n\n");
+		Collections.sort(l, new NameComparator());
+		System.out.println("\n\ncompared and sorted by using name and comparator : ");
+		l.forEach(a->{System.out.println("name-> "+a.name+" gender-> "+a.gender+" age-> "+a.age+" salary-> "+a.salary);});
+		System.out.println("\n\n");
+		Collections.sort(l, new AgeComparator());
+		System.out.println("\n\ncompared and sorted by using age and comparator : ");
+		l.forEach(a->{System.out.println("name-> "+a.name+" gender-> "+a.gender+" age-> "+a.age+" salary-> "+a.salary);});
+		System.out.println("\n\n");
+		
+		Collections.sort(l, new SalaryComparator());
+		System.out.println("\n\ncompared and reversely sorted by using salary and comparator : ");
+		l.forEach(a->{System.out.println("name-> "+a.name+" gender-> "+a.gender+" age-> "+a.age+" salary-> "+a.salary);});
+		System.out.println("\n\n");
+		
 		return l;
 	}
 	public static List<String> addelement(){
