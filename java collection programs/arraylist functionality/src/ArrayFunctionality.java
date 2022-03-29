@@ -281,7 +281,26 @@ class Enumoperation{
 		one,two,three,four;
 	}
 	public void operation(ArrayFunctionality s1,ArrayFunctionality s2,ArrayFunctionality s3, ArrayFunctionality s4) {
+		EnumMap<key,ArrayFunctionality> e= new EnumMap<key,ArrayFunctionality>(key.class);
+		e.put(key.one, s1);
+		e.put(key.two, s3);
+		e.put(key.four, s4);
+		e.put(key.three, s2);
+		System.out.println("\n\nenum data with key and values: ");
 		
+		e.forEach((k,v)->{System.out.println("Keys: "+k+" names: "+v.name+" gender: "+v.gender+" age: "+v.age+" salary: "+v.salary);});
+		
+	}
+}
+class CollectionOperation{
+	public void operation(List<String> s) {
+		Collections.addAll(s,"collect 1", "collect 2","collect 3"); //it means to add the string inside list of string
+		System.out.println("\n\n");
+		s.forEach(a->{System.out.println("collection data: "+a);});
+		System.out.println("\n\nmaximum value inside the collection: "+Collections.max(s));
+		System.out.println("\n\nminimum value inside the collection: "+Collections.min(s));
+		Collections.reverse(s);
+		System.out.println("\n\nreverse of collection data: "+s);
 		
 	}
 }
@@ -325,6 +344,8 @@ class MainArray{
 		Enumoperation e=new Enumoperation();
 		e.operation(arr,arr1,ar2,arr3);
 		
+		CollectionOperation c=new CollectionOperation();
+		c.operation(linkedlist);
 		
 	}
 	
