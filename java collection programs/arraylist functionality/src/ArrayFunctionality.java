@@ -42,7 +42,7 @@ public class ArrayFunctionality implements Comparable<ArrayFunctionality> { //na
 		this.age=age;
 		
 	}
-	public int setage() {
+	public int getage() {
 	return age;
 	
 	}
@@ -492,6 +492,29 @@ class MainArray{
 		System.out.println("\n\nsorted by name using java8: ");
 		l.forEach(a->{System.out.println("name-> "+a.name+" gender-> "+a.gender+" age-> "+a.age+" salary-> "+a.salary);});
 		System.out.println("\n\n");
+		
+		
+		Comparator<ArrayFunctionality> c1= Comparator.comparing(ArrayFunctionality::getgender);
+		Collections.sort(l,c1);
+		System.out.println("\n\nsorted by gender using java8: ");
+		l.forEach(a->{System.out.println("name-> "+a.name+" gender-> "+a.gender+" age-> "+a.age+" salary-> "+a.salary);});
+		System.out.println("\n\n");
+		
+		
+		
+		Comparator<ArrayFunctionality> c2=Comparator.comparing(ArrayFunctionality::getage);
+		Collections.sort(l,c2);
+		System.out.println("\n\nsorted by age using java8: ");
+		l.forEach(a->{System.out.println("name-> "+a.name+" gender-> "+a.gender+" age-> "+a.age+" salary-> "+a.salary);});
+		System.out.println("\n\n");
+		
+		
+		Comparator<ArrayFunctionality> c3=Comparator.comparing(ArrayFunctionality::getsalary);
+		Collections.sort(l,c3);
+		System.out.println("\n\nsorted by salary using java8: ");
+		l.forEach(a->{System.out.println("name-> "+a.name+" gender-> "+a.gender+" age-> "+a.age+" salary-> "+a.salary);});
+		System.out.println("\n\n");
+		
 		
 		
 		
