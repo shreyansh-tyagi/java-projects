@@ -51,7 +51,7 @@ public class ArrayFunctionality implements Comparable<ArrayFunctionality> { //na
 	}
 	public float getsalary()
 	{
-		return salary;
+		return salary; 
 	}
 }
 
@@ -485,6 +485,16 @@ class MainArray{
 		System.out.println("\n\ncompared and reversely sorted by using salary and comparator : ");
 		l.forEach(a->{System.out.println("name-> "+a.name+" gender-> "+a.gender+" age-> "+a.age+" salary-> "+a.salary);});
 		System.out.println("\n\n");
+		
+		
+		Comparator<ArrayFunctionality> c=Comparator.comparing(ArrayFunctionality::getname);
+		Collections.sort(l,c);
+		System.out.println("\n\nsorted by name using java8: ");
+		l.forEach(a->{System.out.println("name-> "+a.name+" gender-> "+a.gender+" age-> "+a.age+" salary-> "+a.salary);});
+		System.out.println("\n\n");
+		
+		
+		
 		
 		return l;
 	}
