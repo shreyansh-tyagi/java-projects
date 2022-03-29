@@ -2,7 +2,7 @@ import java.util.*;
 import java.util.Map.Entry;
 //import java.lang.*;
 import java.io.*;
-public class ArrayFunctionality implements Comparable<MainArray> {
+public class ArrayFunctionality implements Comparable<ArrayFunctionality> {
 	String name,gender;
 	int age;
 	float salary;
@@ -13,7 +13,7 @@ public class ArrayFunctionality implements Comparable<MainArray> {
 		this.age=a;
 		this.salary=s;
 	}
-	public int compareTo(MainArray o) {
+	public int compareTo(ArrayFunctionality o) {
 		if (salary==o.salary)
 			return 0;
 		else if (salary>o.salary)
@@ -326,7 +326,7 @@ class MainArray{
 		ArrayFunctionality ar2=new ArrayFunctionality("shivani","female",25,30000);
 		ArrayFunctionality arr3=new ArrayFunctionality("shalu","female",23,39000);
 		List<ArrayFunctionality> l=addtolist(arr,arr1,ar2,arr3);
-		
+		 
 		System.out.println("printing the array functionality");
 		l.forEach(a->{System.out.println("name-> "+a.name+" gender-> "+a.gender+" age-> "+a.age+" salary-> "+a.salary);});
 		List<String> lis2=addelement();
@@ -411,6 +411,10 @@ class MainArray{
 		l.add(arr1);
 		l.add(ar2);
 		l.add(arr3);
+		Collections.sort(l);
+		System.out.println("\n\ncompared by using salary : ");
+		l.forEach(a->{System.out.println("name-> "+a.name+" gender-> "+a.gender+" age-> "+a.age+" salary-> "+a.salary);});
+		System.out.println("\n\n");
 		return l;
 	}
 	public static List<String> addelement(){
