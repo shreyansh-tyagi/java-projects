@@ -2,7 +2,7 @@ import java.util.*;
 import java.util.Map.Entry;
 //import java.lang.*;
 import java.io.*;
-public class ArrayFunctionality {
+public class ArrayFunctionality implements Comparable<MainArray> {
 	String name,gender;
 	int age;
 	float salary;
@@ -12,6 +12,16 @@ public class ArrayFunctionality {
 		this.gender=g;
 		this.age=a;
 		this.salary=s;
+	}
+	public int compareTo(MainArray o) {
+		if (salary==o.salary)
+			return 0;
+		else if (salary>o.salary)
+			return 1;
+		else
+			return -1;
+		
+		
 	}
 
 }
@@ -301,9 +311,13 @@ class CollectionOperation{
 		System.out.println("\n\nminimum value inside the collection: "+Collections.min(s));
 		Collections.reverse(s);
 		System.out.println("\n\nreverse of collection data: "+s);
+		Collections.sort(s,Collections.reverseOrder()); //first it will contain the list into the reverse order and then it sort the element
+		System.out.println("\n\nafter sorting the collection data: "+s);
 		
 	}
 }
+
+
 
 class MainArray{
 	public static void main(String args[]) {
