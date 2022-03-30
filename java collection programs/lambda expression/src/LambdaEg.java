@@ -11,3 +11,11 @@ public class LambdaEg {
 	}
 
 }
+class MainLambda{
+	public static void main(String args[]) {
+		List<LambdaEg> list=new ArrayList();
+		list.add(new LambdaEg(11,21,32000,"shrey","male"));
+		
+	}
+	
+}
