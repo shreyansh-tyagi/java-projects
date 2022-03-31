@@ -5,10 +5,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController
-@SpringBootApplication
+@RestController  // 
+@SpringBootApplication //configuration, component scan , enableautoconfiguration
 public class SpringFirstProgramApplication {
-	@RequestMapping
+	@RequestMapping()
 	public String name() {
 		return "<h1> hello shreyansh <h1>";
 	}
