@@ -5,6 +5,7 @@ package in.springboot.service;
 import java.util.*;
 
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.GetMapping;
 
 import in.springboot.entity.Customer;
 
@@ -43,7 +44,7 @@ public class ControllerService {
 		list.add(c);
 
 	}
-	
+	@GetMapping("/testing")
 	public List<Customer> getlist(){
 		return list;
 	}
