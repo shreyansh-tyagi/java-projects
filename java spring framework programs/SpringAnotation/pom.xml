@@ -28,7 +28,7 @@
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-devtools</artifactId>
+			<artifactId>spring-boot-devtools</artifactId> <!-- library loading -->
 			<scope>runtime</scope>
 			<optional>true</optional>
 		</dependency>
