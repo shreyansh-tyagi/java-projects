@@ -6,6 +6,7 @@ package in.springboot.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import in.springboot.service.ControllerService;
@@ -21,8 +22,12 @@ public class CustomerController {
 	
 	ControllerService service;
 	
+	@GetMapping("/testing")
 	public List<Customer> getList(){
-		return service.getlist();
+		System.out.println("inside controller method");
+		System.out.println("inside controller method");
+		
+		return service.getlist();  
 	}
  
 }
