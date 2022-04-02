@@ -15,6 +15,29 @@ import in.springboot.entity.Customer;
  */
 @Service
 public class ControllerService {
+	static {
+	List<Customer> list=new ArrayList<>();
+	Customer c = new Customer();
+	c.setId(1);
+	c.setAge(21);
+	c.setName("shreyansh");
+	c.setLocation("ghaziabad");
+	list.add(c);
+
+	c = new Customer();
+	c.setId(1);
+	c.setAge(23);
+	c.setName("shivani");
+	c.setLocation("ghukna");
+	list.add(c);
+
+	c = new Customer();
+	c.setId(1);
+	c.setAge(24);
+	c.setName("ajay");
+	c.setLocation("delhi");
+	list.add(c);
+	}
 
 	
 	public List<Customer> getlist(){
