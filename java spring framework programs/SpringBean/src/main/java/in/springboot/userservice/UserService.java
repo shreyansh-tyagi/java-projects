@@ -9,7 +9,7 @@ import java.util.*;
 @Service
 public class UserService {
 
-	public List<User> getlist() {
+	public List<User> getlistconstruct() {
 		List<User> user = new ArrayList<>();
 
 		User u = new User(1, "user1");
@@ -24,7 +24,7 @@ public class UserService {
 		return user;
 	}
 
-	public List<User> getlistmethod() {
+	public List<User> getlistgetset() {
 		List<User> user1 = new ArrayList<>();
 
 		User u = new User(1, "user1");
