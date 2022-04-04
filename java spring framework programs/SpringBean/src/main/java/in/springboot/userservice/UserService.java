@@ -31,6 +31,13 @@ public class UserService {
 		u.setid(13);
 		u.setname("user33");
 		user1.add(u);
+		
+		getlistmethod(user1);
+		
+		return user;
+	}
+	public List<User> getlistmethod(List<User> user1){
+		return user1;
 	}
 
 }
