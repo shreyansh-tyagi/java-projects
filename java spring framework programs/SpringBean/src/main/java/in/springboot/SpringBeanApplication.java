@@ -25,8 +25,16 @@ public class SpringBeanApplication {
 		
 		//by using the alias name 
 		UserService u1=(UserService) ap.getBean("bean1");
-		System.out.println("printing the list created using constructor using alisa: "+u1.getlistconstruct());
+		System.out.println("printing the list created using constructor using alias: "+u1.getlistconstruct());
+		
+		UserService u2=(UserService) ap.getBean("bean2");
+		System.out.println("printing the list created using getset method using alias: "+u2.getlistgetset());
+		
+		
 		((AbstractApplicationContext) ap).close();
+		
+		
+		
 	}
 
 }
