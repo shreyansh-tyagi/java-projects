@@ -19,12 +19,15 @@
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
+			<artifactId>spring-boot-starter-web</artifactId> <!-- spring-boot-starter-web 
+			dependency for building web applications using Spring MVC. It uses the tomcat as 
+			 the default embedded container. -->
 		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-devtools</artifactId>
+			<artifactId>spring-boot-devtools</artifactId> <!-- spring-boot-devtools dependency 
+			for automatic reloads or live reload of applications. -->
 			<scope>runtime</scope>
 			<optional>true</optional>
 		</dependency>
