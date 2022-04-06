@@ -4,10 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.stereotype.Service;
+
 import in.springboot.entity.Product;
 import in.springboot.exceptions.NoDataFoundException;
 import in.springboot.exceptions.ResouceNotFoundException;
 
+@Service
 public class ProductService {
 	List<Product> list=new ArrayList<>();
 	

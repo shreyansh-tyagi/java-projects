@@ -4,10 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.stereotype.Service;
+
 import in.springboot.entity.Employee;
 import in.springboot.exceptions.NoDataFoundException;
 import in.springboot.exceptions.ResouceNotFoundException;
 
+@Service
 public class EmployeeService {
 	List<Employee> list=new ArrayList<>();
 	public List<Employee> getlist(){
