@@ -40,6 +40,10 @@ public class ErrorObject {
 	public void setTimestamp(long timestamp) {
 		this.timestamp = timestamp;
 	}
+	
+	public ErrorObject() {
+		
+	}
 	public ErrorObject (int status,String message,long timestamp) {
 		this.status=status;
 		this.message=message;
