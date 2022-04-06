@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import in.springboot.entity.Employee;
+import in.springboot.exceptions.NoDataFoundException;
 
 public class EmployeeService {
 	public List<Employee> getlist(){
@@ -13,6 +14,10 @@ public class EmployeeService {
 		list.add(new Employee(3, "Employee 3", 30, "India"));
 		list.add(new Employee(4, "Employee 4", 43, "India"));
 		list.add(new Employee(5, "Employee 5", 55, "India"));
+		
+		if(list.size()>0)
+			return list;
+		throw new NoDataFoundException("there is no data available inside the list, list is empty");
 	}
 
 }
