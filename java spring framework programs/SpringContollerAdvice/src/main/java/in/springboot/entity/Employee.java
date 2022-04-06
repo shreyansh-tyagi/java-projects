@@ -3,6 +3,13 @@ package in.springboot.entity;
 public class Employee {
 	int id,age;
 	String name,location;
+	
+	public Employee(int id,String name,int age,String location){
+		this.id=id;
+		this.name=name;
+		this.age=age;
+		this.location=location;
+	}
 	/**
 	 * @return the id
 	 */
