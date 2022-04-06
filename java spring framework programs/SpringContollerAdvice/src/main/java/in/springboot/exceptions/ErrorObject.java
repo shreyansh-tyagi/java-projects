@@ -11,7 +11,7 @@ public class ErrorObject {
 		return status;
 	}
 	/**
-	 * @param status the status to set
+	 * @param status the status to set 
 	 */
 	public void setStatus(int status) {
 		this.status = status;
