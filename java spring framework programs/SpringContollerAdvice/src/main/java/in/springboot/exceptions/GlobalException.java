@@ -6,24 +6,32 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
 @ControllerAdvice
+/*
+ * We will add @ControllerAdvice annotation to this class to handle exceptions
+ * at the application level.
+ */
 public class GlobalException {
-	
+
 	@ExceptionHandler
-	public ResponseEntity<ErrorObject> handleResouceNotFoundException(ResouceNotFoundException ex){
-		ErrorObject eobj=new ErrorObject();
+	/*
+	 * @ExceptionHandler annotation catches the exception for the specific
+	 * exception.
+	 */
+	public ResponseEntity<ErrorObject> handleResouceNotFoundException(ResouceNotFoundException ex) {
+		ErrorObject eobj = new ErrorObject();
 		eobj.setStatus(HttpStatus.NOT_FOUND.value());
 		eobj.setMessage(ex.getMessage());
 		eobj.setTimestamp(System.currentTimeMillis());
 		return new ResponseEntity<ErrorObject>(eobj, HttpStatus.NOT_FOUND);
 	}
-	
+
 	@ExceptionHandler
-	public ResponseEntity<ErrorObject> handleNoDataFoundException(NoDataFoundException ex){
-		ErrorObject eobj=new ErrorObject();
+	public ResponseEntity<ErrorObject> handleNoDataFoundException(NoDataFoundException ex) {
+		ErrorObject eobj = new ErrorObject();
 		eobj.setStatus(HttpStatus.NO_CONTENT.value());
 		eobj.setMessage(ex.getMessage());
 		eobj.setTimestamp(System.currentTimeMillis());
-		return new ResponseEntity<ErrorObject>(eobj, HttpStatus.NO_CONTENT);
+		return new ResponseEntity<ErrorObject>(eobj, HttpStatus.OK);
 	}
 
 }
