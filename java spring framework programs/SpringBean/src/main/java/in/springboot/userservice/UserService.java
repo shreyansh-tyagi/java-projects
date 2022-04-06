@@ -6,7 +6,7 @@ import in.springboot.user.User;
 
 import java.util.*;
 
-@Service
+@Service("bean3")
 public class UserService {
 
 	public List<User> getlistconstruct() {
