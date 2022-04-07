@@ -7,6 +7,14 @@ public class ErrorObject {
 	/**
 	 * @return the status
 	 */
+	
+	public ErrorObject(int status, String message, long time) {
+		super();
+		this.status = status;
+		this.message = message;
+		this.time = time;
+	}
+
 	public int getStatus() {
 		return status;
 	}
@@ -23,15 +31,12 @@ public class ErrorObject {
 		return message;
 	}
 	
-	public ErrorObject() {
-		
-	}
-	public ErrorObject(int status, String message, long time) {
-		super();
-		this.status = status;
-		this.message = message;
-		this.time = time;
-	}
+	/*
+	 * public ErrorObject() {
+	 * 
+	 * }
+	 */
+
 	/**
 	 * @param message the message to set
 	 */
@@ -50,5 +55,5 @@ public class ErrorObject {
 	public void setTime(long time) {
 		this.time = time;
 	}
-
+	
 }
