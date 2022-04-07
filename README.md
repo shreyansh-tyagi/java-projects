@@ -22,3 +22,15 @@
 ## *@Bean*
 * In Spring, the objects that form the backbone of your application and that are managed by the Spring IoC container are called beans. A bean is an object that is instantiated, assembled, and otherwise managed by a Spring IoC container.
 * Spring @Bean annotation tells that a method produces a bean to be managed by the Spring container. It is a method-level annotation. During Java configuration ( @Configuration ), the method is executed and its return value is registered as a bean within a BeanFactory .
+
+
+## *@Qualifier*
+* The @Qualifier annotation in Spring is used to differentiate a bean among the same type of bean objects. If we have more than one bean of the same type and want to wire only one of them then use the @Qualifier annotation along with @Autowired to specify which exact bean will be wired.
+
+## *@ControllerAdvice*
+* We will add @ControllerAdvice annotation to this class to handle exceptions at the application level.
+* @ControllerAdvice is a specialization of the @Component annotation which allows to handle exceptions across the whole application in one global handling component. It can be viewed as an interceptor of exceptions thrown by methods annotated with @RequestMapping and similar.
+
+## *@ExceptionHandler*
+*  @ExceptionHandler annotation catches the exception for the specific exception.
+* @ExceptionHandler is an annotation for handling exceptions in specific handler classes or handler methods.
