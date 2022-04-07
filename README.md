@@ -43,4 +43,6 @@
 * Path variable in the spring boot represents different kinds of parameters in the incoming request with the help of @pathvariable annotation.
 
 ## *ResponseEntity*
-* ResponseEntity is an extension of HttpEntity that represents an HTTP response including status, headers and body. ResponseEntity allows you to modify the response with optional headers and status code. In spring applications, ResponseEntity is used in @Controller methods as well as in RestTemplate
+* ResponseEntity is an extension of HttpEntity that represents an HTTP response including status, headers and body. ResponseEntity allows you to modify the response with optional headers and status code. In spring applications, ResponseEntity is used in @Controller methods as well as in RestTemplate.
+
+
