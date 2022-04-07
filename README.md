@@ -34,3 +34,7 @@
 ## *@ExceptionHandler*
 *  @ExceptionHandler annotation catches the exception for the specific exception.
 * @ExceptionHandler is an annotation for handling exceptions in specific handler classes or handler methods.
+
+
+## *@RequestMapping()*
+* @RequestMapping is the most common and widely used annotation in Spring MVC. It is used to map web requests onto specific handler classes and/or handler methods. @RequestMapping can be applied to the controller class as well as methods.
