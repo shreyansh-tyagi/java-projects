@@ -39,3 +39,5 @@
 ## *@RequestMapping()*
 * @RequestMapping is the most common and widely used annotation in Spring MVC. It is used to map web requests onto specific handler classes and/or handler methods. @RequestMapping can be applied to the controller class as well as methods.
 
+## *@PathVarviable*
+* Path variable in the spring boot represents different kinds of parameters in the incoming request with the help of @pathvariable annotation.
