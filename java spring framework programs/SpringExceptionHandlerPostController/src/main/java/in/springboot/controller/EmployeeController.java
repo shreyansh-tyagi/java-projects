@@ -10,6 +10,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -55,6 +57,14 @@ public class EmployeeController {
 	public String getpostvariable(@PathVariable Integer id,@PathVariable String name,@PathVariable Integer age,@PathVariable String location) {
 		return "id: "+id+" my name is: "+name+" age: "+age+" location: "+location;
 	}
+	
+	
+	@PostMapping("/employee")
+	public String postmapping(@RequestBody Employee emp) {
+		System.out.println("printing the employee data"+emp);
+		return "SUCCESS";
+	}
+	
 
 	@ResponseStatus(value = HttpStatus.BAD_REQUEST, reason = "pass integer only")
 	@ExceptionHandler(NumberFormatException.class)
