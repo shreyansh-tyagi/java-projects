@@ -45,17 +45,17 @@ public class EmployeeController {
 		return service.getEmployee(id);
 	}
 	
-	@GetMapping("employee/{id}")
-	public String getEmployee1(@PathVariable Long id) {
-		return "the passed id is: "+id;
-		
-	}
 	
-	@ResponseStatus(value=HttpStatus.BAD_REQUEST,reason="pass integer only")
-	@ExceptionHandler(IllegalArgumentException.class)
-	public String handleException(IllegalArgumentException ex) {
-		return ex.getMessage();
-	}
+	  @GetMapping("employee/{id}") public String getEmployee1(@PathVariable Long
+	  id) { return "the passed id is: "+id;
+	  
+	  }
+	  
+	  @ResponseStatus(value=HttpStatus.BAD_REQUEST,reason="pass integer only")
+	  
+	  @ExceptionHandler(IllegalArgumentException.class) public String
+	  handleException(IllegalArgumentException ex) { return ex.getMessage(); }
+	 
 	
 	@ExceptionHandler(NoDataFoundException.class)
 	public ResponseEntity<ErrorObject> handleException(){
