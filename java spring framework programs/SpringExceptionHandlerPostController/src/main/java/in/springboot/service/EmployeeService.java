@@ -31,5 +31,8 @@ public class EmployeeService {
 		return theEmployee.get();
 
 	}
+	public Employee getlistpost(){
+		return new Employee(5,24,"post employee");
+	} 
 
 }

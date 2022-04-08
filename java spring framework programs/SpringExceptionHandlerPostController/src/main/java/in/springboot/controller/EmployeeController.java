@@ -2,6 +2,8 @@ package in.springboot.controller;
 
 import java.util.List;
 
+import javax.annotation.PostConstruct;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -20,6 +22,17 @@ public class EmployeeController {
 	
 	@Autowired
 	EmployeeService service;
+	
+	public EmployeeController(){
+		System.out.println("we are in employee controller constructor");
+		/* System.out.println(service.getlistpost()); */ //it will create a null pointer exception
+	}
+	
+	@PostConstruct
+	public void  getpostconstruct() {
+		System.out.println("we are in get post construct ");
+		System.out.println(service.getlistpost());
+	}
 	
 	@GetMapping("/employee")
 	public List<Employee> getlist(){
