@@ -20,46 +20,52 @@ import in.springboot.service.EmployeeService;
 
 @RestController
 public class EmployeeController {
-	
+
 	@Autowired
 	EmployeeService service;
-	
-	public EmployeeController(){
+
+	public EmployeeController() {
 		System.out.println("we are in employee controller constructor");
-		/* System.out.println(service.getlistpost()); */ //it will create a null pointer exception
+		/* System.out.println(service.getlistpost()); */ // it will create a null pointer exception
 	}
-	
+
 	@PostConstruct
-	public void  getpostconstruct() {
+	public void getpostconstruct() {
 		System.out.println("we are in get post construct ");
 		System.out.println(service.getlistpost());
 	}
-	
+
 	@GetMapping("/employee")
-	public List<Employee> getlist(){
+	public List<Employee> getlist() {
 		return service.getlist();
 	}
-	
+
 	@GetMapping("employee/{id}")
 	public Employee getEmployee(@PathVariable Integer id) {
 		return service.getEmployee(id);
 	}
-	
-	
-	  @GetMapping("employee/{id}") public String getEmployee1(@PathVariable Long
-	  id) { return "the passed id is: "+id;
-	  
-	  }
-	  
-	  @ResponseStatus(value=HttpStatus.BAD_REQUEST,reason="pass integer only")
-	  
-	  @ExceptionHandler(IllegalArgumentException.class) public String
-	  handleException(IllegalArgumentException ex) { return ex.getMessage(); }
-	 
-	
+
+	/*
+	 * @GetMapping("employee/{id}") public String getEmployee1(@PathVariable String
+	 * id) { return "the passed id is: " + id;
+	 * 
+	 * }
+	 */ 
+	@GetMapping("users/{id}/{name}/{age}/{location}")
+	public String getpostvariable(@PathVariable Integer id,@PathVariable String name,@PathVariable Integer age,@PathVariable String location) {
+		return "id: "+id+" my name is: "+name+" age: "+age+" location: "+location;
+	}
+
+	@ResponseStatus(value = HttpStatus.BAD_REQUEST, reason = "pass integer only")
+	@ExceptionHandler(NumberFormatException.class)
+	public String handleException(IllegalArgumentException ex) {
+		return ex.getMessage();
+	}
+
 	@ExceptionHandler(NoDataFoundException.class)
-	public ResponseEntity<ErrorObject> handleException(){
-		ErrorObject obj=new ErrorObject(HttpStatus.NOT_FOUND.value(),"data not found for this",System.currentTimeMillis());
+	public ResponseEntity<ErrorObject> handleException() {
+		ErrorObject obj = new ErrorObject(HttpStatus.NOT_FOUND.value(), "data not found for this",
+				System.currentTimeMillis());
 		return new ResponseEntity<ErrorObject>(obj, HttpStatus.NOT_FOUND);
 	}
 

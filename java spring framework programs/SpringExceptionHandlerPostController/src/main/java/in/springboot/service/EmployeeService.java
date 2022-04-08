@@ -1,11 +1,12 @@
 package in.springboot.service;
 
 import java.util.ArrayList;
+
 import java.util.List;
 import java.util.Optional;
 
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PathVariable;
+//import org.springframework.web.bind.annotation.PathVariable;
 
 import in.springboot.entity.Employee;
 import in.springboot.exception.NoDataFoundException;
@@ -20,10 +21,10 @@ public class EmployeeService {
 		list.add(new Employee(2, 22, "shrey"));
 		list.add(new Employee(3, 23, "shreya"));
 		list.add(new Employee(4, 24, "amit"));
-		return list; 
+		return list;
 	}
 
-	public Employee getEmployee(@PathVariable Integer id) {
+	public Employee getEmployee(Integer id) {
 		Optional<Employee> theEmployee = list.stream().filter(e -> e.getId() == id).findFirst();
 		if (!theEmployee.isPresent()) {
 			throw new NoDataFoundException("employee is not present for id: " + id);
@@ -31,8 +32,9 @@ public class EmployeeService {
 		return theEmployee.get();
 
 	}
-	public Employee getlistpost(){
-		return new Employee(5,24,"post employee");
-	} 
+
+	public Employee getlistpost() {
+		return new Employee(5, 24, "post employee");
+	}
 
 }
