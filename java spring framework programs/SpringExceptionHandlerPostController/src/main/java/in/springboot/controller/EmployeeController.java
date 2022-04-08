@@ -60,7 +60,7 @@ public class EmployeeController {
 	@ExceptionHandler(NumberFormatException.class)
 	public String handleException(IllegalArgumentException ex) {
 		return ex.getMessage();
-	}
+	} 
 
 	@ExceptionHandler(NoDataFoundException.class)
 	public ResponseEntity<ErrorObject> handleException() {

@@ -50,3 +50,10 @@
 
 ## *ResponseStatus*
 * @ResponseStatus marks a method or exception class with the status code and reason message that should be returned. The status code is applied to the HTTP response when the handler method is invoked, or whenever the specified exception is thrown.
+
+## *@PostMapping*
+* @PostMapping is a composed annotation that acts as a shortcut for @RequestMapping(method = RequestMethod. POST) . @PostMapping annotated methods handle the HTTP POST requests matched with given URI expression.
+* @PostMapping annotation maps HTTP POST requests onto specific handler methods. It is a composed annotation that acts as a shortcut for @RequestMapping(method = RequestMethod. POST) 
+
+## *@RequestBody*
+* @RequestBody annotation maps the HttpRequest body to a transfer or domain object, enabling automatic deserialization of the inbound HttpRequest body onto a Java object. Spring automatically deserializes the JSON into a Java type, assuming an appropriate one is specified.
