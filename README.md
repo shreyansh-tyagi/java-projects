@@ -68,3 +68,6 @@
 
 ## *@Controller*
 * The @Controller annotation indicates that a particular class serves the role of a controller. Spring Controller annotation is typically used in combination with annotated handler methods based on the @RequestMapping annotation. It can be applied to classes only. It's used to mark a class as a web request handler.
+
+## *@ModelAttribute*
+* @ModelAttribute is an annotation that binds a method parameter or method return value to a named model attribute, and then exposes it to a web view.
