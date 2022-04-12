@@ -68,7 +68,7 @@ public class EmployeeController {
 	
 	@RequestMapping(value= {"user1","user2"})
 	public String getrequest() {
-		return "SUCCESS";
+		return "WE ARE IN REQUEST MAPPING"; 
 	}
 	
 
