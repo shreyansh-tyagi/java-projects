@@ -74,3 +74,6 @@
 
 ## *@RequestHeader*
 * @RequestHeader annotation binds request header values to method parameters. If the method parameter is Map<String, String> , MultiValueMap<String, String> , or HttpHeaders then the map is populated with all header names and values.
+
+## *@ResponseEntity*
+* @ResponseEntity represents the whole HTTP response: status code, headers, and body. As a result, we can use it to fully configure the HTTP response. If we want to use it, we have to return it from the endpoint; Spring takes care of the rest
