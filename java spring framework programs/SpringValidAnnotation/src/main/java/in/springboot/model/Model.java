@@ -6,7 +6,7 @@ public class Model {
 	
 	@NotNull
 	private String name;
-	@NotNull
+	@NotNull(message="location should not be null shreyansh") //this message will be shown on the default message while the error will occured
 	private String location;
 	/**
 	 * @return the name
