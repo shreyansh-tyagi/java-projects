@@ -61,3 +61,6 @@
 
 ## *@ResponseBody*
 * @ResponseBody is a Spring annotation which binds a method return value to the web response body. It is not interpreted as a view name. It uses HTTP Message converters to convert the return value to HTTP response body, based on the content-type in the request HTTP header.
+
+## *@Valid*
+* The @Valid annotation will tell spring to go and validate the data passed into the controller.
