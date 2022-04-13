@@ -14,7 +14,7 @@ import in.springboot.customer.Customer;
 @RestController
 public class Contoller {
 	
-	@GetMapping("/user")
+	@GetMapping("/user") //localhost:8080/user?name=shreyansh&age=25  this is the way to provide the link for request param 
 	public String getuser(@RequestParam String name,@RequestParam(defaultValue="25") int age) {
 		return "my name is "+name+" and age is "+age;
 	}
