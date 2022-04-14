@@ -2,7 +2,31 @@ package in.springboot.student;
 
 import java.time.LocalDate;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
+
+
+@Entity
+@Table
 public class Student {
+	
+	@Id
+	@SequenceGenerator(
+			name="springboot_sequence",
+			sequenceName="springboot_sequence",
+			allocationSize=1
+			
+			)
+	
+	@GeneratedValue(
+			strategy=GenerationType.SEQUENCE,
+			generator="springboot_sequence"    
+			)
+	
 	private long id;
 	private String name, email;
 	private LocalDate dob;
