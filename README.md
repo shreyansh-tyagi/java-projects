@@ -87,3 +87,8 @@
 ## *@Table*
 * The @Table annotation specifies the name of the database table to be used for mapping.
 
+## *@Id*
+* The @Id annotation specifies the primary key of an entity.
+
+## *@GenerateValue*
+* @GeneratedValue provides for the specification of generation strategies for the values of primary keys.
