@@ -80,3 +80,10 @@
 
 ## *@RequestParam*
 * In Spring MVC, the @RequestParam annotation is used to read the form data and bind it automatically to the parameter present in the provided method. So, it ignores the requirement of HttpServletRequest object to read the provided data.
+
+## *@Entity*
+* The @Entity annotation specifies that the class is an entity and is mapped to a database table
+
+## *@Table*
+* The @Table annotation specifies the name of the database table to be used for mapping.
+
