@@ -23,7 +23,8 @@ public class Student {
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "springboot_sequence")
 
 	private Long id;
-	private String name, email;
+	private String name;
+	private static String email;
 	private LocalDate dob;
 	
 	@Transient
@@ -66,12 +67,12 @@ public class Student {
 		this.name = name;
 	}
 
-	public String getEmail() {
+	public static String getEmail() {
 		return email;
 	}
 
 	public void setEmail(String email) {
-		this.email = email;
+		Student.email = email;
 	}
 
 	public LocalDate getDob() {

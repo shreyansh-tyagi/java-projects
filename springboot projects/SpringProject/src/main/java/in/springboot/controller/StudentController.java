@@ -4,6 +4,8 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import in.springboot.service.StudentService;
@@ -20,4 +22,9 @@ public class StudentController {
 		return service.getlist();
 	}
 
+	@PostMapping("/student")
+	public String registerNewStudent(@RequestBody Student student) {
+		service.addNewStudent(student);
+		return "Success";
+	}
 }
