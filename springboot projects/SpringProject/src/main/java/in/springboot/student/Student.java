@@ -24,9 +24,9 @@ public class Student {
 
 	private Long id;
 	private String name;
-	private static String email;
+	private String email;
 	private LocalDate dob;
-	
+
 	@Transient
 	private int age;
 
@@ -40,7 +40,7 @@ public class Student {
 		this.name = name;
 		this.email = email;
 		this.dob = dob;
-	
+
 	}
 
 	public Student(String name, String email, LocalDate dob) {
@@ -48,7 +48,7 @@ public class Student {
 		this.name = name;
 		this.email = email;
 		this.dob = dob;
-		
+
 	}
 
 	public long getId() {
@@ -67,12 +67,12 @@ public class Student {
 		this.name = name;
 	}
 
-	public static String getEmail() {
+	public String getEmail() {
 		return email;
 	}
 
 	public void setEmail(String email) {
-		Student.email = email;
+		this.email = email;
 	}
 
 	public LocalDate getDob() {
@@ -84,7 +84,7 @@ public class Student {
 	}
 
 	public int getAge() {
-		
+
 		return Period.between(this.dob, LocalDate.now()).getYears();
 	}
 

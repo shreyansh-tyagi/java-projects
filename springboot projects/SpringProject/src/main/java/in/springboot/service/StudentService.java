@@ -27,15 +27,17 @@ public class StudentService {
 		student.add(new Student(5L, "rajeev", "rj1234@gmail.com", LocalDate.of(1989, Month.MAY, 29)));
 		return student;
 	}
-	
+
 	public void addNewStudent(Student student) {
-		Optional<Student> studentOptional=studentRepository.findStudentByEmail(Student.getEmail());
-		if(studentOptional.isPresent()) {
+
+		Optional<Student> studentOptional = studentRepository.findStudentByEmail(student.getEmail());
+		if (studentOptional.isPresent()) {
 			throw new IllegalStateException("email taken");
 		}
 		studentRepository.save(student);
-		//System.out.println(student);
-		
+
+		System.out.println(student);
+
 	}
 
 }
