@@ -11,13 +11,13 @@ import in.springboot.student.Student;
 
 @RestController
 public class StudentController {
-	
+
 	@Autowired
 	StudentService service;
-	
+
 	@GetMapping("/student")
-	public List<Student> getlist(){
+	public List<Student> getlist() {
 		return service.getlist();
-	} 
+	}
 
 }
