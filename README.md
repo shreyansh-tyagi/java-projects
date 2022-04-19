@@ -102,3 +102,7 @@
 
 ## *@Configuration*
 * Spring @Configuration annotation helps in Spring annotation based configuration. @Configuration annotation indicates that a class declares one or more @Bean methods and may be processed by the Spring container to generate bean definitions and service requests for those beans at runtime.
+
+
+## *CommandLineRunner*
+* Command Line Runner is an interface. It is used to execute the code after the Spring Boot application started.
