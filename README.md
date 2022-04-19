@@ -96,4 +96,5 @@
 ## *@SequenceGenerator*
 * It is the name of the primary key generator as specified in the @SequenceGenerator or @TableGenerator annotation. These two annotations controls how database sequence or table is mapped. @SequenceGenerator and @TableGenerator can be used on the entity class or on the primary key field or property.
 
-
+## *@Repository*
+* @Repository Annotation is a specialization of @Component annotation which is used to indicate that the class provides the mechanism for storage, retrieval, update, delete and search operation on objects
