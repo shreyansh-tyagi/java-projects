@@ -42,13 +42,13 @@
 ## *@PathVarviable*
 * Path variable in the spring boot represents different kinds of parameters in the incoming request with the help of @pathvariable annotation.
 
-## *ResponseEntity*
+## *@ResponseEntity*
 * ResponseEntity is an extension of HttpEntity that represents an HTTP response including status, headers and body. ResponseEntity allows you to modify the response with optional headers and status code. In spring applications, ResponseEntity is used in @Controller methods as well as in RestTemplate.
 
-## *postConstruct*
+## *@PostConstruct*
 * @PostConstruct is an annotation used on a method that needs to be executed after dependency injection is done to perform any initialization.
 
-## *ResponseStatus*
+## *@ResponseStatus*
 * @ResponseStatus marks a method or exception class with the status code and reason message that should be returned. The status code is applied to the HTTP response when the handler method is invoked, or whenever the specified exception is thrown.
 
 ## *@PostMapping*
