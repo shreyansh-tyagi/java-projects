@@ -27,7 +27,7 @@ public class Student {
 			generator="springboot_sequence"    
 			)
 	
-	private long id;
+	private Long id;
 	private String name, email;
 	private LocalDate dob;
 	private int age;
