@@ -118,3 +118,6 @@
 
 ## *@PutMapping*
 * @PutMapping annotation Annotation for mapping HTTP PUT requests onto specific handler methods. Specifically, @PutMapping is a composed annotation that acts as a shortcut for @RequestMapping(method = RequestMethod. PUT) . consumes – Narrows the primary mapping by media types that can be consumed by the mapped handler.
+
+## *@Transactional*
+* The @Transactional annotation makes use of the attributes rollbackFor or rollbackForClassName to rollback the transactions, and the attributes noRollbackFor or noRollbackForClassName to avoid rollback on listed exceptions. The default rollback behavior in the declarative approach will rollback on runtime exceptions.
