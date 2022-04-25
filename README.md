@@ -110,7 +110,7 @@
 ## *@Transient*
 * @Transient annotation is used to mark a field to be transient for the mapping framework, which means the field marked with @Transient is ignored by mapping framework and the field not mapped to any database column (in RDBMS) or Document property (in NOSQL). Thus the property will not be persisted to data store.
 
-## *DeleteMapping*
+## *@DeleteMapping*
 * @DeleteMapping annotation maps HTTP DELETE requests onto specific handler methods. It is a composed annotation that acts as a shortcut for @RequestMapping(method = RequestMethod. DELETE) 
 
 ## *PathVariable*
