@@ -143,5 +143,5 @@
 ## *@NotNull*
 * @NotNull: a constrained CharSequence, Collection, Map, or Array is valid as long as it's not null, but it can be empty. @NotEmpty: a constrained CharSequence, Collection, Map, or Array is valid as long as it's not null, and its size/length is greater than zero.
 
-## **
-* 
+## *@Size*
+* @Size annotation is used to restrict the filed length to a specified value. It has attributes such as max and min which are used to set the maximum and minimum values respectively. The message attribute in this annotation is used to display a default message on validation failure.
