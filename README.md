@@ -121,3 +121,6 @@
 
 ## *@Transactional*
 * The @Transactional annotation makes use of the attributes rollbackFor or rollbackForClassName to rollback the transactions, and the attributes noRollbackFor or noRollbackForClassName to avoid rollback on listed exceptions. The default rollback behavior in the declarative approach will rollback on runtime exceptions.
+
+## *@Slf4j*
+* SLF4J and Apache Commons Logging APIs allow us the flexibility to change our logging framework with no impact on our code. And we can use Lombok's @Slf4j and @CommonsLog annotations to add the right logger instance into our class: org. slf4j. Logger for SLF4J and org.
