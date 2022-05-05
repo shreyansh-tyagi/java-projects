@@ -150,7 +150,10 @@
 * The @JsonProperty annotation is used to map property names with JSON keys during serialization and deserialization. By default, if you try to serialize a POJO, the generated JSON will have keys mapped to the fields of the POJO.
 
 ## *Json Processing Exception*
-* public class JsonProcessingException extends IOException. Intermediate base class for all problems encountered when processing (parsing, generating) JSON content that are not pure I/O problems. Regular IOException s will be passed through as is. Sub-class of IOException for convenience
+* public class JsonProcessingException extends IOException. Intermediate base class for all problems encountered when processing (parsing, generating) JSON content that are not pure I/O problems. Regular IOException s will be passed through as is. Sub-class of IOException for convenience.
+
+## *MDC*
+* A Mapped Diagnostic Context, or MDC in short, is an instrument for distinguishing interleaved log output from different sources. Log output is typically interleaved when a server handles multiple clients near-simultaneously. The MDC is managed on a per thread basis.
 
 
 
