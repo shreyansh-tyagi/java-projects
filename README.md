@@ -138,4 +138,10 @@
 * @AllArgsConstructor generates a constructor with 1 parameter for each field in your class. Fields marked with @NonNull result in null checks on those parameters. So, no, it does not make your fields private & final as for example @Value annotation. Follow this answer to receive notifications.
 
 ## *@RequiredArgsConstructor*
-* Generates a constructor with required arguments. Required arguments are uninitialized final fields and fields with constraints such as @NonNull . Default access modifier is public . Make sure you already installed Lombok setup for your IDE
+* Generates a constructor with required arguments. Required arguments are uninitialized final fields and fields with constraints such as @NonNull . Default access modifier is public . Make sure you already installed Lombok setup for your IDE.
+
+## *@NotNull*
+* @NotNull: a constrained CharSequence, Collection, Map, or Array is valid as long as it's not null, but it can be empty. @NotEmpty: a constrained CharSequence, Collection, Map, or Array is valid as long as it's not null, and its size/length is greater than zero.
+
+## **
+* 
