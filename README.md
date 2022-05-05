@@ -124,3 +124,6 @@
 
 ## *@Slf4j*
 * SLF4J and Apache Commons Logging APIs allow us the flexibility to change our logging framework with no impact on our code. And we can use Lombok's @Slf4j and @CommonsLog annotations to add the right logger instance into our class: org. slf4j. Logger for SLF4J and org.
+
+## *@Validated*
+* When Spring Boot finds an argument annotated with @Valid, it automatically bootstraps the default JSR 380 implementation — Hibernate Validator — and validates the argument. When the target argument fails to pass the validation, Spring Boot throws a MethodArgumentNotValidException exception.
