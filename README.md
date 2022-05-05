@@ -134,7 +134,7 @@
 ## *@Builder*
 * @Builder. The @Builder annotation produces complex builder APIs for the annotated POJO classes. For example, if we annotate a class Article annotated with @Builder annotation, we can create Article instances using builder API.
 
-## *AllArgsConstructor*
+## *@AllArgsConstructor*
 * @AllArgsConstructor generates a constructor with 1 parameter for each field in your class. Fields marked with @NonNull result in null checks on those parameters. So, no, it does not make your fields private & final as for example @Value annotation. Follow this answer to receive notifications.
 
 ## *@RequiredArgsConstructor*
