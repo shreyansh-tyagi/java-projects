@@ -145,3 +145,6 @@
 
 ## *@Size*
 * @Size annotation is used to restrict the filed length to a specified value. It has attributes such as max and min which are used to set the maximum and minimum values respectively. The message attribute in this annotation is used to display a default message on validation failure.
+
+## *@JsonProperty*
+* The @JsonProperty annotation is used to map property names with JSON keys during serialization and deserialization. By default, if you try to serialize a POJO, the generated JSON will have keys mapped to the fields of the POJO
