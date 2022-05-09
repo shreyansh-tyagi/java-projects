@@ -155,8 +155,8 @@
 ## *MDC*
 * A Mapped Diagnostic Context, or MDC in short, is an instrument for distinguishing interleaved log output from different sources. Log output is typically interleaved when a server handles multiple clients near-simultaneously. The MDC is managed on a per thread basis.
 
-
-
+## *Object Mapper*
+* When using JSON format, Spring Boot will use an ObjectMapper instance to serialize responses and deserialize requests.
 
 
 
