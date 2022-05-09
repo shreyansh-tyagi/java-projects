@@ -158,6 +158,8 @@
 ## *Object Mapper*
 * When using JSON format, Spring Boot will use an ObjectMapper instance to serialize responses and deserialize requests.
 
+## *CrudRepository*
+* CrudRepository is a Spring Data interface for generic CRUD operations on a repository of a specific type. It provides several methods out of the box for interacting with a database.
 
 
 
