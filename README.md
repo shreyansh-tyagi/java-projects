@@ -170,3 +170,6 @@
 
 ## *ComponentScan*
 * @ComponentScan tells Spring in which packages you have annotated classes which should be managed by Spring.
+
+## *ModelMapper*
+* The goal of ModelMapper is to make object mapping easy by automatically determining how one object model maps to another.
