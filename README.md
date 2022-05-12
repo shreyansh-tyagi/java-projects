@@ -173,3 +173,6 @@
 
 ## *ModelMapper*
 * The goal of ModelMapper is to make object mapping easy by automatically determining how one object model maps to another.
+
+## *DTO*
+* It is basically used to pass data with multiple attributes in one shot from client to server, to avoid multiple calls to a remote server. Another advantage of using DTOs on RESTful APIs written in Java (and on Spring Boot), is that they can help to hide implementation details of domain objects (JPA entities).
