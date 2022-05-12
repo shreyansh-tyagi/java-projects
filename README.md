@@ -167,3 +167,6 @@
 
 ## *EnableAsync*
 * @EnableAsync annotation switches on Spring's ability to run @Async methods in a background thread pool. This class also customizes the Executor by defining a new bean. Here, the method is named taskExecutor , since this is the specific method name for which Spring searches.
+
+## *ComponentScan*
+* @ComponentScan tells Spring in which packages you have annotated classes which should be managed by Spring.
