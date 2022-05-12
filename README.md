@@ -162,6 +162,5 @@
 * CrudRepository is a Spring Data interface for generic CRUD operations on a repository of a specific type. It provides several methods out of the box for interacting with a database.
 
 
-
-
-
+## *EnableTransactionManagement*
+* Annotation Type EnableTransactionManagement. Enables Spring's annotation-driven transaction management capability, similar to the support found in Spring's <tx:*> XML namespace. To be used on @Configuration classes to configure traditional, imperative transaction management or reactive transaction management.
