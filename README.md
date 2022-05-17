@@ -132,7 +132,8 @@
 * @Data is a convenient shortcut annotation that bundles the features of @ToString , @EqualsAndHashCode , @Getter / @Setter and @RequiredArgsConstructor together: In other words, @Data generates all the boilerplate that is normally associated with simple POJOs (Plain Old Java Objects) and beans: getters for all fields.
 
 ## *@Builder*
-* @Builder. The @Builder annotation produces complex builder APIs for the annotated POJO classes. For example, if we annotate a class Article annotated with @Builder annotation, we can create Article instances using builder API.
+* @Builder. The @Builder annotation produces complex builder APIs for the annotated POJO classes. For example, if we annotate a class Article annotated with @Builder annotation, we can create Article instances using builder API this will follow the internal builder desing pattern which can used at 3 level:- class level, constructor level, method level.
+
 
 ## *@AllArgsConstructor*
 * @AllArgsConstructor generates a constructor with 1 parameter for each field in your class. Fields marked with @NonNull result in null checks on those parameters. So, no, it does not make your fields private & final as for example @Value annotation. Follow this answer to receive notifications.
@@ -168,7 +169,7 @@
 ## *EnableAsync*
 * @EnableAsync annotation switches on Spring's ability to run @Async methods in a background thread pool. This class also customizes the Executor by defining a new bean. Here, the method is named taskExecutor , since this is the specific method name for which Spring searches.
 
-## *ComponentScan*
+## *@ComponentScan*
 * @ComponentScan tells Spring in which packages you have annotated classes which should be managed by Spring.
 
 ## *ModelMapper*
