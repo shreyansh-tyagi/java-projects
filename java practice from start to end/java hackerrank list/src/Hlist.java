@@ -51,7 +51,44 @@ Explanation
 
 Having performed all  queries, we print  as a single line of space-separated integers.
  */
-public class Hlist {
-	
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
 
-}
+public class Hlist {
+
+
+		public static void main(String[] args) {
+			/*
+			 * Enter your code here. Read input from STDIN. Print output to STDOUT. Your
+			 * class should be named Solution.
+			 */
+			List<Integer> list = new ArrayList<Integer>();
+			Scanner sc = new Scanner(System.in);
+			int a = sc.nextInt();
+			for (int i = 0; i < a; i++) {
+				list.add(i, sc.nextInt());
+			}
+			int b = sc.nextInt();
+			List<String> str=new ArrayList<String>();
+			for (int i = 0; i < b; i++) {
+				str.add(i,sc.nextLine());
+				if (str.get(i) == "Insert") {
+					int d = sc.nextInt();
+					int e = sc.nextInt();
+					list.set(d-1, e);
+				} else {
+					int f = sc.nextInt();
+					list.remove(f-1);
+				}
+			}
+			for (Integer l : list) {
+
+				System.out.println(l);
+			}
+		}
+	}
+
+
