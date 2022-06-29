@@ -63,8 +63,9 @@ public class Listofarray {
 		//int arr1[] = new int[100];
 		//int arr2[][]=new int[100][100];
 		 List<ArrayList> arr = new ArrayList<ArrayList>();
-         ArrayList<Integer> arr1=new ArrayList<Integer>();
+         
 		for (int x = 0; x <a; x++) {
+			ArrayList<Integer> arr1=new ArrayList<Integer>();
 			System.out.println("enter the size of array: ");
 			int b = sc.nextInt();
 			for (int i = 0; i < b; i++) {
@@ -73,14 +74,20 @@ public class Listofarray {
 
 			}
 			arr.add(arr1);
-			arr1.clear();
+			
 			
 
 		}
+		System.out.println(arr);
 		query(arr);
 		
 
 	}
+	/*public static ArrayList<Integer> clr(ArrayList<Integer> arr1) {
+		arr1.clear();
+		return arr1;
+		
+	}*/
 
 	public static void query(List<ArrayList> arr) {
 			System.out.println("enter the number of queries: ");
