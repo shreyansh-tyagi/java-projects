@@ -74,9 +74,10 @@ public class Listofarray {
 			}
 			arr.add(arr1);
 			arr1 = null;
-			query(arr);
+			
 
 		}
+		query(arr);
 		
 
 	}
