@@ -51,44 +51,38 @@ Explanation
 
 Having performed all  queries, we print  as a single line of space-separated integers.
  */
-import java.io.*;
-import java.util.*;
-import java.text.*;
-import java.math.*;
-import java.util.regex.*;
+import java.util.Scanner;
+import java.util.LinkedList;
 
-public class Hlist {
-
-
-		public static void main(String[] args) {
-			/*
-			 * Enter your code here. Read input from STDIN. Print output to STDOUT. Your
-			 * class should be named Solution.
-			 */
-			List<Integer> list = new ArrayList<Integer>();
-			Scanner sc = new Scanner(System.in);
-			int a = sc.nextInt();
-			for (int i = 0; i < a; i++) {
-				list.add(i, sc.nextInt());
-			}
-			int b = sc.nextInt();
-			List<String> str=new ArrayList<String>();
-			for (int i = 0; i < b; i++) {
-				str.add(i,sc.nextLine());
-				if (str.get(i) == "Insert") {
-					int d = sc.nextInt();
-					int e = sc.nextInt();
-					list.set(d-1, e);
-				} else {
-					int f = sc.nextInt();
-					list.remove(f-1);
-				}
-			}
-			for (Integer l : list) {
-
-				System.out.println(l);
-			}
-		}
-	}
-
-
+public class Solution {
+    public static void main(String[] args) {
+        /* Create and fill Linked List of Integers */
+        Scanner scan = new Scanner(System.in);
+        int N = scan.nextInt();
+        LinkedList<Integer> list = new LinkedList<>();
+        for (int i = 0; i < N; i++) {
+            int value = scan.nextInt();
+            list.add(value);
+        }
+        
+        /* Perfrom queries on Linked List */
+        int Q = scan.nextInt();
+        for (int i = 0; i < Q; i++) {
+            String action = scan.next();
+            if (action.equals("Insert")) {
+                int index = scan.nextInt();
+                int value = scan.nextInt();
+                list.add(index, value);
+            } else { // "Delete"
+                int index = scan.nextInt();
+                list.remove(index);
+            }
+        }
+        scan.close();
+        
+        /* Print our updated Linked List */
+        for (Integer num : list) {
+            System.out.print(num + " ");
+        }
+    }
+}
