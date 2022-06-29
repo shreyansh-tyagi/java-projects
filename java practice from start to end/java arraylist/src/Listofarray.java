@@ -85,14 +85,23 @@ public class Listofarray {
 			System.out.println("enter the number of queries: ");
 			Scanner sc = new Scanner(System.in);
 			int c=sc.nextInt();
-			List<ArrayList> arr1 = new ArrayList<ArrayList>(c);
+			
 			for(int i=1;i<=c;i++) {
 				System.out.println("enter the array and index of queries: ");
-		        ArrayList arr2=new ArrayList<Integer>(2);
-		        arr2.add(0,sc.nextInt());
-		        arr2.add(1,sc.nextInt());
-		        arr1.add(arr2);
+		        int a=sc.nextInt();
+		        int b=sc.nextInt();
+		        ArrayList arr1=new ArrayList<Integer>();
+		        arr1=arr.get(a);
+		        if (arr1.size()>=b){
+		        	System.out.println(arr1.get(b));
+		        	
+		        }
+		        else {
+		        	System.out.println("ERROR");
+		        	
+		        }
+		       
 			}
-			
+		
 		}
 }
