@@ -73,7 +73,7 @@ public class Listofarray {
 
 			}
 			arr.add(arr1);
-			arr1 = null;
+			arr1.clear();
 			
 
 		}
