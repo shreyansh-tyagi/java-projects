@@ -53,50 +53,46 @@ import java.util.regex.*;
 public class Listofarray {
 
 	public static void main(String[] args) {
-			/*
-			 * Enter your code here. Read input from STDIN. Print output to STDOUT. Your
-			 * class should be named Solution.
-			 */
-			Scanner sc = new Scanner(System.in);
-			System.out.println("enter the number of iteration:");
-			int a = sc.nextInt();
-			int arr1[] = new int[100];
-			//int arr2[][]=new int[100][100];
-			//List<Integer> arr = new ArrayList<Integer>(a);
+		/*
+		 * Enter your code here. Read input from STDIN. Print output to STDOUT. Your
+		 * class should be named Solution.
+		 */
+		Scanner sc = new Scanner(System.in);
+		System.out.println("enter the number of iteration:");
+		int a = sc.nextInt();
+		//int arr1[] = new int[100];
+		//int arr2[][]=new int[100][100];
+		 List<ArrayList> arr = new ArrayList<ArrayList>(a);
+         ArrayList arr1=new ArrayList<Integer>();
+		for (int x = 1; x <= a; x++) {
+			System.out.println("enter the size of array: ");
+			int b = sc.nextInt();
+			for (int i = 1; i <= b; i++) {
+				System.out.println("enter the element into the array: ");
+				arr1.add(i,sc.nextInt());
 
-			for (int x = 1; x <= a; x++) {
-				System.out.println("enter the size of array: ");
-				int b = sc.nextInt();
-				for (int i = 1; i <= b; i++) {
-					System.out.println("enter the element into the array: ");
-					arr1[i]=sc.nextInt();
-
-				}
-				int arr2[][]= {arr1};
-				arr1=null;
-				
 			}
-			query(arr2);
-			
+			arr.add(arr1);
+			arr1 = null;
+			query(arr);
+
+		}
+		
+
 	}
-			public static void query(int arr2[][]) {
+
+	public static void query(List<ArrayList> arr) {
 			System.out.println("enter the number of queries: ");
 			Scanner sc = new Scanner(System.in);
 			int c=sc.nextInt();
+			List<ArrayList> arr1 = new ArrayList<ArrayList>(c);
 			for(int i=1;i<=c;i++) {
 				System.out.println("enter the array and index of queries: ");
-				int l=sc.nextInt();
-				int d=sc.nextInt();
-				int ab[]=new int[10];
-				ab[0]=l;
-				ab[1]=d;
-				int arr3[][]= {ab};
-						
+		        ArrayList arr2=new ArrayList<Integer>(2);
+		        arr2.add(0,sc.nextInt());
+		        arr2.add(1,sc.nextInt());
+		        arr1.add(arr2);
 			}
-			for(int i=1;i<=a;i++) {
-				if(arr2[i].length())
-			}
-
+			
 		}
-	}
-
+}
