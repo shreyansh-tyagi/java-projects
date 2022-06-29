@@ -49,7 +49,7 @@ import java.util.*;
 import java.text.*;
 import java.math.*;
 import java.util.regex.*;
-
+import java.lang.*;
 public class Listofarray {
 
 	public static void main(String[] args) {
@@ -62,12 +62,12 @@ public class Listofarray {
 		int a = sc.nextInt();
 		//int arr1[] = new int[100];
 		//int arr2[][]=new int[100][100];
-		 List<ArrayList> arr = new ArrayList<ArrayList>(a);
-         ArrayList arr1=new ArrayList<Integer>();
-		for (int x = 1; x <= a; x++) {
+		 List<ArrayList> arr = new ArrayList<ArrayList>();
+         ArrayList<Integer> arr1=new ArrayList<Integer>();
+		for (int x = 0; x <a; x++) {
 			System.out.println("enter the size of array: ");
 			int b = sc.nextInt();
-			for (int i = 1; i <= b; i++) {
+			for (int i = 0; i < b; i++) {
 				System.out.println("enter the element into the array: ");
 				arr1.add(i,sc.nextInt());
 
@@ -86,14 +86,15 @@ public class Listofarray {
 			Scanner sc = new Scanner(System.in);
 			int c=sc.nextInt();
 			
-			for(int i=1;i<=c;i++) {
-				System.out.println("enter the array and index of queries: ");
+			for(int i=0;i<c;i++) {
+				System.out.println("enter to select the  array: ");
 		        int a=sc.nextInt();
+		        System.out.println("enter the index of the  array: ");
 		        int b=sc.nextInt();
-		        ArrayList arr1=new ArrayList<Integer>();
-		        arr1=arr.get(a);
+		        ArrayList<Integer> arr1=new ArrayList<Integer>();
+		        arr1=arr.get(a-1);
 		        if (arr1.size()>=b){
-		        	System.out.println(arr1.get(b));
+		        	System.out.println(arr1.get(b-1));
 		        	
 		        }
 		        else {
