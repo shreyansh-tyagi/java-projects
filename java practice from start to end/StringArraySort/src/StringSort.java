@@ -13,6 +13,7 @@ public class StringSort {
 		String s[]= {"123","5","99","845","11"};
 		HashMap<String, Integer> h=new HashMap<>();
 		List<Integer> l=new ArrayList<>();
+		List<String> str=new ArrayList<>();
 		String a="";
 		int b=0;
 		for(int i=0;i<s.length;i++) {
@@ -46,8 +47,17 @@ public class StringSort {
 		Collections.sort(l);
 		System.out.println("the list is: "+l);
 		for(int k=0;k<s.length;k++) {
-			
+			for(int m=0;m<s.length;m++) {
+				a=s[m];
+				for(int l1=0;l1<a.length();l1+=2) {
+					b+=Integer.parseInt(String.valueOf(a.charAt(l1)));
+					}
+				if(l.get(k)==b) {
+					str.add(k, a);
+					}
+				b=0;
+				}
 		}
-		
+		System.out.println("the sorted list of string is: "+str);
 	}
 }
